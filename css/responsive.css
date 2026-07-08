@@ -1,0 +1,81 @@
+/* ==========================================================================
+   Trovotech Solutions — Responsive Layer
+   Mobile-first base lives in style.css. Here we scale UP at breakpoints and
+   collapse multi-column layouts DOWN for small screens.
+   Breakpoints:  640 (sm)  768 (md)  1024 (lg)
+   ========================================================================== */
+
+/* ---------------- MOBILE DEFAULTS (< 768px) ---------------- */
+/* Collapse every multi-column grid to a single column on small screens. */
+@media (max-width: 767px) {
+  .grid--2,
+  .grid--3,
+  .grid--4,
+  .hero__grid,
+  .split,
+  .service__cols,
+  .mini-grid,
+  .footer__grid { grid-template-columns: 1fr; }
+
+  .logo-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Swap desktop nav for a slide-down mobile menu */
+  .nav-links {
+    position: fixed;
+    inset: 64px 0 auto 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-4);
+    background: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+    box-shadow: var(--shadow-md);
+    padding: var(--space-5) var(--container-pad);
+    transform: translateY(-120%);
+    transition: transform var(--transition);
+  }
+  .nav-links.is-open { transform: translateY(0); }
+  .nav-toggle { display: inline-flex; }
+  .navbar .btn { display: none; }
+
+  /* Typography scales down for readability */
+  :root { --fs-display: 2rem; --fs-h1: 1.75rem; --fs-h2: 1.5rem; }
+
+  .hero__visual { display: none; }
+  .footer__bottom { flex-direction: column; align-items: flex-start; }
+  .section-head--row { align-items: flex-start; }
+  .cta { padding: var(--space-7) var(--space-5); }
+}
+
+/* ---------------- TABLET (>= 640px) ---------------- */
+@media (min-width: 640px) {
+  :root { --container-pad: 1.5rem; }
+  .logo-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* ---------------- TABLET / SMALL LAPTOP (>= 768px) ---------------- */
+@media (min-width: 768px) {
+  :root {
+    --container-pad: 2.5rem;   /* 40px */
+    --section-y: 5rem;
+  }
+  .grid--2 { grid-template-columns: repeat(2, 1fr); }
+  .grid--4 { grid-template-columns: repeat(2, 1fr); }  /* 2-up on tablet */
+  .service__cols { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ---------------- DESKTOP (>= 1024px) ---------------- */
+@media (min-width: 1024px) {
+  :root {
+    --container-pad: 4rem;     /* 64px desktop margins */
+    --section-y: 6rem;
+  }
+  .grid--3 { grid-template-columns: repeat(3, 1fr); }
+  .grid--4 { grid-template-columns: repeat(4, 1fr); }  /* full 4-up */
+  .logo-grid { grid-template-columns: repeat(6, 1fr); }
+}
+
+/* ---------------- MOTION PREFERENCE ---------------- */
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+  .reveal { opacity: 1; transform: none; }
+}
