@@ -78,4 +78,61 @@
   /* ---- Footer year ---- */
   const yearEl = document.querySelector("[data-year]");
   if (yearEl) { yearEl.textContent = String(new Date().getFullYear()); }
+
+  /* ---- Contact Form Web3Forms AJAX ---- */
+  const contactForm = document.getElementById("contactForm");
+  const formResult = document.getElementById("contactFormResult");
+  const submitBtnText = document.getElementById("submitBtnText");
+
+  if (contactForm && formResult && submitBtnText) {
+    contactForm.addEventListener("submit", function(e) {
+      e.preventDefault();
+      
+      const formData = new FormData(contactForm);
+      const object = Object.fromEntries(formData);
+      const json = JSON.stringify(object);
+      
+      // UI Feedback
+      submitBtnText.textContent = "Sending...";
+      formResult.style.display = "none";
+      formResult.classList.remove("is-error", "is-success");
+      formResult.style.backgroundColor = "transparent";
+
+      fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: json
+      })
+      .then(async (response) => {
+        let json = await response.json();
+        if (response.status == 200) {
+          formResult.innerHTML = "Form submitted successfully! We'll be in touch soon.";
+          formResult.style.color = "#10b981"; // Success green
+          formResult.style.backgroundColor = "rgba(16, 185, 129, 0.1)";
+          contactForm.reset();
+        } else {
+          console.log(response);
+          formResult.innerHTML = json.message || "Something went wrong!";
+          formResult.style.color = "#ef4444"; // Error red
+          formResult.style.backgroundColor = "rgba(239, 68, 68, 0.1)";
+        }
+      })
+      .catch(error => {
+        console.log(error);
+        formResult.innerHTML = "Something went wrong! Please try again.";
+        formResult.style.color = "#ef4444";
+        formResult.style.backgroundColor = "rgba(239, 68, 68, 0.1)";
+      })
+      .then(function() {
+        formResult.style.display = "block";
+        submitBtnText.textContent = "Send Message";
+        setTimeout(() => {
+          formResult.style.display = "none";
+        }, 5000);
+      });
+    });
+  }
 })();
