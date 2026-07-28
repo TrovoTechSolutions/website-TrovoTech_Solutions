@@ -1,0 +1,89 @@
+/* ==========================================================================
+   Trovotech Solutions — Design Tokens
+   Single source of truth for colors, typography, spacing, radius & elevation.
+   ========================================================================== */
+
+:root {
+  /* ---------- Brand Colors ---------- */
+  --color-primary: #ffffff;        /* White — authority, headings, footer */
+  --color-primary-600: #f4f4f5;    /* Off-white hover/tint */
+  --color-secondary: #3b82f6;      /* Vivid Blue — primary actions, links (adjusted for dark mode) */
+  --color-secondary-600: #2563eb;  /* Blue hover */
+  --color-accent: #f87171;         /* Vibrant Red — highlights, gradient terminus (adjusted for dark mode) */
+
+  /* ---------- Surfaces & Text ---------- */
+  --color-bg: #09090b;             /* Page canvas (Deep Black) */
+  --color-surface: #18181b;        /* Cards / containers (Zinc 900) */
+  --color-surface-alt: #111113;    /* Subtle section contrast (Very Dark Zinc) */
+  --color-text: #e4e4e7;           /* Primary text (Zinc 200) */
+  --color-text-muted: #a1a1aa;     /* Secondary text (Zinc 400) */
+  --color-text-invert: #09090b;    /* Text on light surfaces (Inverted) */
+  --color-border: #27272a;         /* Hairline borders (Zinc 800) */
+  --color-border-strong: #3f3f46;  /* Input borders (Zinc 700) */
+
+  /* ---------- Tinted Utility ---------- */
+  --color-secondary-tint: rgba(37, 99, 235, 0.10);
+  --color-accent-tint: rgba(239, 68, 68, 0.10);
+
+  /* ---------- Gradients ---------- */
+  --gradient-brand: linear-gradient(135deg, #2563eb 0%, #ef4444 100%);
+  --gradient-hero: radial-gradient(at 0% 0%, rgba(37, 99, 235, 0.08) 0, transparent 55%),
+                   radial-gradient(at 100% 100%, rgba(239, 68, 68, 0.08) 0, transparent 55%);
+
+  /* ---------- Typography ---------- */
+  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  --fs-display: 3rem;      /* 48px — hero H1 */
+  --fs-h1: 2.5rem;         /* 40px */
+  --fs-h2: 2rem;           /* 32px — section titles */
+  --fs-h3: 1.5rem;         /* 24px — card titles */
+  --fs-h4: 1.125rem;       /* 18px */
+  --fs-lg: 1.125rem;       /* 18px — lead paragraph */
+  --fs-base: 1rem;         /* 16px — body */
+  --fs-sm: 0.875rem;       /* 14px — small text / labels */
+  --fs-xs: 0.75rem;        /* 12px — badges / captions */
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+  --fw-extrabold: 800;
+
+  --lh-tight: 1.15;
+  --lh-snug: 1.35;
+  --lh-normal: 1.6;
+  --tracking-tight: -0.02em;
+  --tracking-wide: 0.08em;
+
+  /* ---------- Spacing scale (4px base) ---------- */
+  --space-1: 0.25rem;   /* 4  */
+  --space-2: 0.5rem;    /* 8  */
+  --space-3: 0.75rem;   /* 12 */
+  --space-4: 1rem;      /* 16 */
+  --space-5: 1.5rem;    /* 24 */
+  --space-6: 2rem;      /* 32 */
+  --space-7: 3rem;      /* 48 */
+  --space-8: 4rem;      /* 64 */
+  --space-9: 6rem;      /* 96 */
+
+  /* ---------- Layout ---------- */
+  --container-max: 1200px;
+  --container-pad: 1.25rem;   /* mobile gutters (20px) */
+  --section-y: 4rem;          /* vertical section rhythm (mobile) */
+
+  /* ---------- Radius ---------- */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-pill: 9999px;
+
+  /* ---------- Elevation (tuned for dark canvas) ---------- */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.6);
+  --shadow-brand: 0 12px 30px rgba(37, 99, 235, 0.35);
+
+  /* ---------- Motion ---------- */
+  --transition: 0.25s ease;
+}

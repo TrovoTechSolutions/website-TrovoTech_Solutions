@@ -1,0 +1,109 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Analytics dashboard illustration showing steady growth, representing reliable engineering">
+  <defs>
+    <linearGradient id="wc-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#18181b"/>
+      <stop offset="1" stop-color="#0b0b0d"/>
+    </linearGradient>
+    <linearGradient id="wc-area" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3b82f6" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#3b82f6" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="wc-brand" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2563eb"/>
+      <stop offset="1" stop-color="#f87171"/>
+    </linearGradient>
+    <radialGradient id="wc-glow" cx="0.55" cy="0.32" r="0.75">
+      <stop offset="0" stop-color="#3b82f6" stop-opacity="0.20"/>
+      <stop offset="1" stop-color="#3b82f6" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="wc-glow2" cx="0.15" cy="0.85" r="0.6">
+      <stop offset="0" stop-color="#f87171" stop-opacity="0.14"/>
+      <stop offset="1" stop-color="#f87171" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="wc-dots" width="34" height="34" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.3" fill="#ffffff" opacity="0.05"/>
+    </pattern>
+  </defs>
+
+  <!-- Backdrop -->
+  <rect width="800" height="600" fill="url(#wc-bg)"/>
+  <rect width="800" height="600" fill="url(#wc-dots)"/>
+  <rect width="800" height="600" fill="url(#wc-glow)"/>
+  <rect width="800" height="600" fill="url(#wc-glow2)"/>
+
+  <!-- App window -->
+  <g>
+    <rect x="104" y="118" width="592" height="364" rx="22" fill="#1b1b20" stroke="#2a2a30" stroke-width="1.5"/>
+    <!-- title bar -->
+    <line x1="104" y1="164" x2="696" y2="164" stroke="#2a2a30" stroke-width="1.5"/>
+    <circle cx="132" cy="141" r="6" fill="#f87171"/>
+    <circle cx="154" cy="141" r="6" fill="#fbbf24"/>
+    <circle cx="176" cy="141" r="6" fill="#3b82f6"/>
+    <rect x="250" y="135" width="180" height="12" rx="6" fill="#26262c"/>
+
+    <!-- Sidebar -->
+    <rect x="124" y="184" width="96" height="278" rx="14" fill="#141418"/>
+    <rect x="140" y="204" width="64" height="12" rx="6" fill="url(#wc-brand)"/>
+    <rect x="140" y="232" width="52" height="9" rx="4.5" fill="#33333a"/>
+    <rect x="140" y="256" width="60" height="9" rx="4.5" fill="#33333a"/>
+    <rect x="140" y="280" width="46" height="9" rx="4.5" fill="#33333a"/>
+    <rect x="140" y="304" width="56" height="9" rx="4.5" fill="#33333a"/>
+    <rect x="140" y="430" width="48" height="9" rx="4.5" fill="#2a2a30"/>
+
+    <!-- Stat cards -->
+    <g>
+      <rect x="240" y="184" width="140" height="70" rx="12" fill="#141418" stroke="#26262c"/>
+      <rect x="256" y="202" width="40" height="8" rx="4" fill="#3a3a42"/>
+      <rect x="256" y="220" width="70" height="16" rx="5" fill="#3b82f6"/>
+
+      <rect x="392" y="184" width="140" height="70" rx="12" fill="#141418" stroke="#26262c"/>
+      <rect x="408" y="202" width="40" height="8" rx="4" fill="#3a3a42"/>
+      <rect x="408" y="220" width="56" height="16" rx="5" fill="#e4e4e7"/>
+
+      <rect x="544" y="184" width="136" height="70" rx="12" fill="#141418" stroke="#26262c"/>
+      <rect x="560" y="202" width="40" height="8" rx="4" fill="#3a3a42"/>
+      <rect x="560" y="220" width="48" height="16" rx="5" fill="#f87171"/>
+    </g>
+
+    <!-- Chart panel -->
+    <rect x="240" y="270" width="440" height="192" rx="14" fill="#141418" stroke="#26262c"/>
+    <!-- gridlines -->
+    <g stroke="#26262c" stroke-width="1">
+      <line x1="264" y1="312" x2="656" y2="312"/>
+      <line x1="264" y1="360" x2="656" y2="360"/>
+      <line x1="264" y1="408" x2="656" y2="408"/>
+    </g>
+    <!-- area + line -->
+    <path d="M264 420 L322 392 L380 404 L438 350 L496 366 L554 312 L612 292 L656 272 L656 440 L264 440 Z" fill="url(#wc-area)"/>
+    <polyline points="264,420 322,392 380,404 438,350 496,366 554,312 612,292 656,272"
+              fill="none" stroke="#3b82f6" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- nodes -->
+    <g fill="#0b0b0d" stroke="#3b82f6" stroke-width="2.5">
+      <circle cx="322" cy="392" r="4"/>
+      <circle cx="438" cy="350" r="4"/>
+      <circle cx="554" cy="312" r="4"/>
+    </g>
+    <!-- highlighted node -->
+    <circle cx="656" cy="272" r="9" fill="#f87171" opacity="0.25"/>
+    <circle cx="656" cy="272" r="5" fill="#f87171" stroke="#0b0b0d" stroke-width="2"/>
+  </g>
+
+  <!-- Floating accent chips -->
+  <g>
+    <!-- code chip -->
+    <rect x="612" y="96" width="72" height="72" rx="18" fill="#1b1b20" stroke="url(#wc-brand)" stroke-width="1.5"/>
+    <polyline points="642,120 632,132 642,144" fill="none" stroke="#3b82f6" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <polyline points="654,120 664,132 654,144" fill="none" stroke="#3b82f6" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- shield chip (reliability) -->
+    <rect x="80" y="250" width="72" height="72" rx="18" fill="#1b1b20" stroke="#2a2a30" stroke-width="1.5"/>
+    <path d="M116 268 L132 275 V288 C132 300 125 306 116 310 C107 306 100 300 100 288 V275 Z"
+          fill="none" stroke="#f87171" stroke-width="3" stroke-linejoin="round"/>
+    <polyline points="108,288 114,294 125,281" fill="none" stroke="#f87171" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- cloud chip -->
+    <rect x="640" y="430" width="72" height="72" rx="18" fill="#1b1b20" stroke="#2a2a30" stroke-width="1.5"/>
+    <path d="M662 476 a12 12 0 0 1 11 -15 a15 15 0 0 1 28 4 a10 10 0 0 1 -3 20 h-33 a10 10 0 0 1 -3 -9 Z"
+          fill="none" stroke="#3b82f6" stroke-width="3" stroke-linejoin="round"/>
+  </g>
+</svg>

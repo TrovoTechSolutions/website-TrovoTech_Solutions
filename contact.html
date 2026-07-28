@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | TrovoTech Solutions</title>
+  <meta name="description" content="Get in touch with TrovoTech Solutions. Email us or give us a call for your software engineering needs." />
+  <link rel="canonical" href="https://trovotechsolutions.in/contact.html" />
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+
+  <!-- Open Graph / social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="TrovoTech Solutions" />
+  <meta property="og:title" content="Contact Us | TrovoTech Solutions" />
+  <meta property="og:description" content="Get in touch with TrovoTech Solutions. Email us or give us a call for your software engineering needs." />
+  <meta property="og:url" content="https://trovotechsolutions.in/contact.html" />
+  <meta property="og:image" content="https://trovotechsolutions.in/assets/logo.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Contact Us | TrovoTech Solutions" />
+  <meta name="twitter:description" content="Get in touch with TrovoTech Solutions. Email us or give us a call for your software engineering needs." />
+  <meta name="twitter:image" content="https://trovotechsolutions.in/assets/logo.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/variables.css?v=3" />
+  <link rel="stylesheet" href="css/style.css?v=3" />
+  <link rel="stylesheet" href="css/responsive.css?v=3" />
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <!-- ============ Navbar ============ -->
+  <header class="navbar">
+    <div class="container navbar__inner">
+      <a href="index.html" class="brand-lockup">
+          <img src="assets/logo.png" alt="TrovoTech Solutions" class="brand-lockup__icon" />
+          <div class="brand-lockup__text">
+            <span class="brand-lockup__title">TrovoTech</span>
+            <span class="brand-lockup__subtitle">Solutions</span>
+            <span class="brand-lockup__tagline">Beyond Today</span>
+          </div>
+        </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="projects.html">Portfolio</a>
+        <a href="contact.html" class="is-active">Contact</a>
+      </nav>
+      <a href="contact.html" class="btn btn--primary">Get a Quote</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============ Contact Header ============ -->
+    <section class="page-hero page-hero--flush">
+      <div class="container page-hero__inner page-hero__inner--center">
+        <h1 class="contact-title">Contact Us</h1>
+      </div>
+      <div class="contact-hero__banner reveal">
+        <img src="assets/contact-illustration.png" alt="Tech workspace illustration" />
+      </div>
+    </section>
+    <!-- ============ Contact Form & Info ============ -->
+    <section class="section section--tight-top">
+      <div class="container">
+
+        <!-- Section intro -->
+        <div class="contact-intro">
+          <p>Have a project in mind or a question about our services? We'd love to hear from you.</p>
+        </div>
+
+        <div class="contact-split">
+          
+          <!-- Left Column: Contact Info -->
+          <div class="contact-left reveal">
+            <h3>TrovoTech Solutions</h3>
+            <p class="contact-lead">Reach out to us through any of the channels below and we'll get back to you as soon as possible.</p>
+
+            <div class="contact-info-list">
+
+              <div class="contact-info-item">
+                <div class="contact-icon">
+                  <span class="material-symbols-outlined">mail</span>
+                </div>
+                <div>
+                  <strong>Email</strong>
+                  <a href="mailto:info@trovotechsolutions.in">info@trovotechsolutions.in</a>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <div class="contact-icon">
+                  <span class="material-symbols-outlined">call</span>
+                </div>
+                <div>
+                  <strong>Phone</strong>
+                  <span class="contact-person">
+                    <span class="material-symbols-outlined">person</span> Gokula Kannan Krishna Moorthi
+                  </span>
+                  <a href="tel:+919042672148">+91 9042672148</a>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <div class="contact-icon">
+                  <span class="material-symbols-outlined">location_on</span>
+                </div>
+                <div>
+                  <strong>Location</strong>
+                  <span class="contact-value">Tamil Nadu, India</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Right Column: Contact Form -->
+          <div class="contact-right reveal">
+            <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+              <input type="hidden" name="access_key" value="34cd1567-e772-4f17-83d3-182ed58383c6">
+              <!-- Honeypot spam filter (bots fill this, humans do not) -->
+              <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" class="is-hidden">
+              
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="name">Full Name <span>*</span></label>
+                  <input type="text" id="name" name="name" class="form-input" placeholder="Your name" required />
+                </div>
+                <div class="form-group">
+                  <label for="email">Email Address <span>*</span></label>
+                  <input type="email" id="email" name="email" class="form-input" placeholder="your@email.com" required />
+                </div>
+                <div class="form-group">
+                  <label for="phone">Phone Number</label>
+                  <input type="tel" id="phone" name="phone" class="form-input" placeholder="+91 XXXXX XXXXX" />
+                </div>
+                <div class="form-group">
+                  <label for="subject">Service Needed <span>*</span></label>
+                  <select id="subject" name="subject" class="form-input" required>
+                    <option value="" disabled selected>Select a service</option>
+                    <option value="Web Apps">Web Apps</option>
+                    <option value="Android Apps">Android Apps</option>
+                    <option value="Desktop Software">Desktop Software</option>
+                    <option value="Web Design">Web Design</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message <span>*</span></label>
+                <textarea id="message" name="message" class="form-textarea" placeholder="Write your message here..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn--submit">
+                <span class="material-symbols-outlined">send</span> <span id="submitBtnText">Send Message</span>
+              </button>
+
+              <div id="contactFormResult" class="contact-form__result" role="status" aria-live="polite"></div>
+
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ Footer ============ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <a href="index.html" class="brand-lockup">
+          <img src="assets/logo.png" alt="TrovoTech Solutions" class="brand-lockup__icon" />
+          <div class="brand-lockup__text">
+            <span class="brand-lockup__title">TrovoTech</span>
+            <span class="brand-lockup__subtitle">Solutions</span>
+            <span class="brand-lockup__tagline">Beyond Today</span>
+          </div>
+        </a>
+          <p class="footer__about">A founder-led software studio building websites, web apps, Android apps and desktop software for growing businesses.</p>
+          <div class="socials">
+            <a href="https://www.linkedin.com/company/trovotechsolutions/?viewAsMember=true" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" fill="currentColor"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <h4>Solutions</h4>
+          <ul class="footer__links">
+            <li><a href="services.html#web-apps">Web Apps</a></li>
+            <li><a href="services.html#android">Android Apps</a></li>
+            <li><a href="services.html#desktop">Desktop Software</a></li>
+            <li><a href="services.html#web-design">Web Design</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul class="footer__links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; <span data-year>2026</span> TrovoTech Solutions. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js?v=3"></script>
+</body>
+</html>
+
