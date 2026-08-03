@@ -17,31 +17,54 @@
   .mini-grid,
   .footer__grid { grid-template-columns: 1fr; }
 
-  /* Swap desktop nav for a slide-down mobile menu */
-  .nav-links {
-    position: fixed;
-    inset: 64px 0 auto 0;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: var(--space-4);
-    background: var(--color-surface);
-    border-bottom: 1px solid var(--color-border);
-    box-shadow: var(--shadow-md);
-    padding: var(--space-5) var(--container-pad);
-    transform: translateY(-120%);
-    transition: transform var(--transition);
-  }
-  .nav-links.is-open { transform: translateY(0); }
-  .nav-toggle { display: inline-flex; }
-  .navbar .btn { display: none; }
-
   /* Typography scales down for readability */
   :root { --fs-display: 2rem; --fs-h1: 1.75rem; --fs-h2: 1.5rem; }
 
-  .hero__visual { display: none; }
+  /* Show the hero video on mobile too, below the text, with a little breathing room */
+  .hero__visual { margin-top: var(--space-6); }
   .footer__bottom { flex-direction: column; align-items: flex-start; }
   .section-head--row { align-items: flex-start; }
   .cta { padding: var(--space-7) var(--space-5); }
+}
+
+/* ---------------- NAV: hamburger + right-side drawer (< 1024px) ---------------- */
+/* The full brand lockup + 5 links + button need a wide viewport, so below 1024px
+   we switch to a slide-in drawer from the RIGHT instead of crowding the bar. */
+@media (max-width: 1023px) {
+  .nav-toggle { display: inline-flex; position: relative; z-index: 60; }
+  .navbar .btn { display: none; }
+  .brand-lockup__icon { height: 52px; }   /* trim the oversized logo */
+
+  /* Full-height drawer from the right, BLACK to match the header (#000) so it
+     reads as one continuous panel. The X (z-index 60) stays on top; links are
+     padded down to clear the navbar/logo row. */
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: min(80vw, 300px);
+    z-index: 45;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-5);
+    background: #000000;
+    border-left: 1px solid var(--color-border);
+    box-shadow: var(--shadow-lg);
+    padding: 6.5rem var(--space-6) var(--space-6);
+    transform: translateX(100%);
+    transition: transform var(--transition);
+    overflow-y: auto;
+  }
+  .nav-links.is-open { transform: translateX(0); }
+}
+
+/* ---------------- Small phones: trim the brand lockup further ---------------- */
+@media (max-width: 600px) {
+  .brand-lockup__icon { height: 44px; }
+  .brand-lockup__title { font-size: 1.35rem; }
+  .brand-lockup__subtitle { font-size: 0.72rem; letter-spacing: 0.3em; }
+  .brand-lockup__tagline { letter-spacing: 0.22em; }
 }
 
 /* ---------------- TABLET (>= 640px) ---------------- */

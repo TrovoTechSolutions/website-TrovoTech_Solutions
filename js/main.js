@@ -9,13 +9,22 @@
   const toggle = document.querySelector(".nav-toggle");
   const links = document.querySelector(".nav-links");
   if (toggle && links) {
+    const toggleIcon = toggle.querySelector(".material-symbols-outlined");
+    const setIcon = function (open) {
+      if (toggleIcon) toggleIcon.textContent = open ? "close" : "menu";
+    };
     toggle.addEventListener("click", function () {
       const open = links.classList.toggle("is-open");
       toggle.setAttribute("aria-expanded", String(open));
+      setIcon(open);
     });
     // Close menu after choosing a link (mobile)
     links.querySelectorAll("a").forEach(function (a) {
-      a.addEventListener("click", function () { links.classList.remove("is-open"); });
+      a.addEventListener("click", function () {
+        links.classList.remove("is-open");
+        toggle.setAttribute("aria-expanded", "false");
+        setIcon(false);
+      });
     });
   }
 
