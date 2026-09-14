@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Trovotech Solutions — Core Styles
+   Trovo Tech Solutions — Core Styles
    Structure: 1) Reset/Base  2) Layout  3) Components  4) Page sections
    All colors/spacing pull from variables.css. No hard-coded hex here except
    inside gradients already tokenized. Mobile-first; breakpoints in responsive.css

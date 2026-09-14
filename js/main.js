@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Trovotech Solutions — Site interactions
+   Trovo Tech Solutions — Site interactions
    Progressive enhancement only: the site is fully usable without JS.
    ========================================================================== */
 (function () {

@@ -1,6 +1,6 @@
-# Trovotech Solutions — Website
+# Trovo Tech Solutions — Website
 
-Clean, production-ready static frontend for Trovotech Solutions (IT services:
+Clean, production-ready static frontend for Trovo Tech Solutions (IT services:
 web, web apps, Android, desktop software).
 
 ## Structure
