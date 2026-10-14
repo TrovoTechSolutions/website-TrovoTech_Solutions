@@ -15,7 +15,7 @@ Preview from the website root with a static server, then open `/products/baylior
 
 ## Contents
 
-Hero, sticky product navigation, core feature blocks, job card/invoice examples, qualified modules, Windows/Android licences, onboarding steps, pricing teaser, FAQ, closing actions and installer contact fallback. Trovo header/footer use shared Phase 3 discovery navigation with root-relative links. See PHASE3.md.
+Hero, sticky product navigation, core feature blocks, job card/invoice examples, qualified modules, Windows/Android licences, onboarding steps, pricing teaser, FAQ, closing actions and installer contact fallback. The Trovo header and footer Products column come from `tools/build-site-header.py` (run it after changing the menu). The page itself is edited directly; the one-off Phase 2 build script was retired.
 
 Assets are copied into `/assets/baylior/`; the page has no cross-repository asset dependency. The composed share card is PNG, exactly 1200×630, from the approved Baylior logo with original headline and platform copy. Open Graph and Twitter metadata use the intended canonical website paths; remote share scrapers will not see the image until release.
 

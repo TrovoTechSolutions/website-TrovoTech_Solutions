@@ -5,7 +5,7 @@
 (function () {
   "use strict";
 
-  // Shared navigation is handled by baylior-navigation.js.
+  // The phone/tablet menu drawer is handled by site-navigation.js.
 
   /* ---- Navbar shadow on scroll ---- */
   const navbar = document.querySelector(".navbar");

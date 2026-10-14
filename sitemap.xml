@@ -61,5 +61,6 @@
   </url>
 
   <!-- Phase 2: local preview only; do not publish until Phase 5 integration is verified. -->
+  <url><loc>https://trovotechsolutions.in/products/</loc><lastmod>2026-10-14</lastmod><priority>0.8</priority></url>
   <url><loc>https://trovotechsolutions.in/products/baylior/</loc><lastmod>2026-10-14</lastmod><priority>0.8</priority></url>
 </urlset>

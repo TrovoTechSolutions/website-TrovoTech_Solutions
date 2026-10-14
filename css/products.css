@@ -1,0 +1,291 @@
+/* ==========================================================================
+   Trovo Tech Solutions — Products
+   Header current-page state, footer Products column, the home page Baylior
+   band and the /products/ page. Company pages keep the Trovo palette; Baylior
+   colours (blue/cyan on night) are used only inside Baylior blocks.
+   ========================================================================== */
+
+:root {
+  --baylior-blue: #2d6bff;
+  --baylior-cyan: #14c8f0;
+  --baylior-night: #0a0f1c;
+  --baylior-panel: #121a2b;
+  --baylior-line: #29364d;
+  --baylior-text: #eaf2ff;
+  --baylior-muted: #b0bdd3;
+  --baylior-gradient: linear-gradient(110deg, #2d6bff, #14c8f0);
+}
+
+/* ============================ Header ============================ */
+
+.nav-links a[aria-current="page"] {
+  color: var(--color-primary);
+  border-bottom-color: var(--color-secondary);
+}
+
+/* Six links plus Get a Quote are tight on small laptops: trim the logo and gaps. */
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .site-header .navbar__inner { gap: var(--space-4); }
+  .site-header .brand-lockup__icon { height: 48px; width: auto; }
+  .site-header .brand-lockup__title { font-size: 1.3rem; }
+  .site-header .brand-lockup__subtitle { font-size: 0.7rem; }
+  .site-header .brand-lockup__tagline { font-size: 0.6rem; }
+  .site-header .nav-links { gap: var(--space-5); }
+  .site-header .nav-links a { font-size: var(--fs-sm); }
+}
+
+/* "Get a Quote" lives in the bar on desktop and inside the drawer below 1024px. */
+.nav-quote { display: none; }
+
+@media (max-width: 1023px) {
+  .nav-links .nav-quote {
+    display: inline-flex;
+    margin-top: var(--space-3);
+    padding: 0.75rem 1.5rem;
+    border: 0;
+    border-radius: var(--radius-sm);
+    background: var(--gradient-brand);
+    color: #ffffff;
+    font-weight: var(--fw-semibold);
+  }
+}
+
+.site-header :focus-visible,
+.bp-home-band :focus-visible,
+.products-page :focus-visible {
+  outline: 3px solid var(--baylior-cyan);
+  outline-offset: 4px;
+  border-radius: 5px;
+}
+
+/* ============================ Footer ============================ */
+
+.footer__grid:has(.footer-products) { grid-template-columns: 1.5fr 1fr 1fr 1fr; }
+
+@media (max-width: 767px) {
+  .footer__grid:has(.footer-products) { grid-template-columns: 1fr; }
+}
+
+/* ============================ Baylior actions ============================ */
+
+.bp-action {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 9px 18px;
+  border-radius: 8px;
+  background: var(--baylior-gradient);
+  color: #071122;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  white-space: nowrap;
+}
+.bp-action--outline {
+  background: #18243a;
+  border: 1px solid #41516b;
+  color: var(--baylior-text);
+}
+
+/* Shown until Phase 5 connects a verified sign-up address (see js/baylior-destinations.js). */
+.bp-placeholder {
+  display: block;
+  margin-top: 4px;
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+.bp-placeholder[hidden] { display: none; }
+
+.bp-explore {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  color: #74dff3;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+.bp-eyebrow {
+  margin-bottom: 17px;
+  color: #7cdff2;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+/* ============================ Home page band ============================ */
+
+.bp-home-band {
+  padding-block: 68px;
+  background: var(--baylior-night);
+  border-block: 1px solid #25334a;
+  color: var(--baylior-text);
+}
+.bp-home-inner {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 70px;
+  align-items: center;
+}
+.bp-home-band h2 {
+  margin-block: 24px 18px;
+  font-size: clamp(29px, 3vw, 42px);
+  line-height: 1.15;
+  letter-spacing: -0.045em;
+}
+.bp-home-band h2 span { color: var(--baylior-cyan); }
+.bp-home-band p:not(.bp-eyebrow) {
+  max-width: 46ch;
+  color: var(--baylior-muted);
+  font-size: 16px;
+  line-height: 1.75;
+}
+.bp-band-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 25px;
+  margin-top: 24px;
+}
+.bp-home-screen { display: block; min-width: 0; }
+.bp-home-screen img,
+.product-card__shot img {
+  width: 100%;
+  height: auto;
+  border: 1px solid #3c4d69;
+  border-radius: 12px;
+}
+
+@media (max-width: 1023px) {
+  .bp-home-inner { gap: 35px; }
+}
+@media (max-width: 767px) {
+  .bp-home-band { padding-block: 48px; }
+  .bp-home-inner { grid-template-columns: 1fr; }
+  .bp-home-inner > div > img { width: 180px; }
+}
+
+/* ============================ /products/ page ============================ */
+
+.products-filter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-6);
+}
+.products-filter__label {
+  margin-right: var(--space-2);
+  color: var(--color-text-muted);
+  font-size: var(--fs-sm);
+}
+.products-filter button {
+  min-height: 40px;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-pill);
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  cursor: pointer;
+}
+.products-filter button:hover { border-color: var(--color-secondary); }
+.products-filter button[aria-pressed="true"] {
+  background: var(--color-secondary-tint);
+  border-color: var(--color-secondary);
+  color: var(--color-primary);
+}
+.products-filter__count { color: var(--color-text-muted); margin-left: 4px; }
+
+.products-grid {
+  display: grid;
+  gap: var(--space-5);
+}
+
+/* One product card. Baylior colours stay inside the card. */
+.product-card {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  gap: var(--space-7);
+  align-items: center;
+  padding: var(--space-7);
+  background: var(--baylior-night);
+  border: 1px solid #2c4769;
+  border-radius: var(--radius-xl);
+  color: var(--baylior-text);
+}
+.product-card[hidden] { display: none; }
+.product-card__tag {
+  display: inline-flex;
+  gap: var(--space-2);
+  margin-bottom: var(--space-5);
+  padding: 4px 12px;
+  border: 1px solid #34506b;
+  border-radius: var(--radius-pill);
+  color: #9fdff0;
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+}
+.product-card__logo { width: 210px; height: auto; }
+.product-card h2 {
+  margin-block: var(--space-5) var(--space-3);
+  color: var(--baylior-text);
+  font-size: var(--fs-h3);
+  letter-spacing: -0.03em;
+}
+.product-card h2 span { color: var(--baylior-cyan); }
+.product-card p { color: var(--baylior-muted); }
+.product-card__features {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-2) var(--space-5);
+  margin-block: var(--space-5);
+}
+.product-card__features li {
+  display: flex;
+  gap: var(--space-2);
+  color: #d6e4f6;
+  font-size: var(--fs-sm);
+}
+.product-card__features .material-symbols-outlined { color: var(--baylior-cyan); font-size: 18px; }
+.product-card__platforms { color: #93a5c0; font-size: var(--fs-xs); letter-spacing: 0.04em; }
+.product-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-4);
+  margin-top: var(--space-5);
+}
+.product-card__shot { display: block; min-width: 0; }
+
+/* Honest "more coming" tile: an invitation, not an empty slot. */
+.products-next {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding: var(--space-5) var(--space-6);
+  border: 1px dashed var(--color-border-strong);
+  border-radius: var(--radius-lg);
+}
+.products-next h3 { font-size: var(--fs-h4); margin-bottom: var(--space-1); }
+.products-next p { color: var(--color-text-muted); font-size: var(--fs-sm); }
+
+@media (max-width: 1023px) {
+  .product-card { grid-template-columns: 1fr; gap: var(--space-6); padding: var(--space-6); }
+}
+@media (max-width: 600px) {
+  .product-card { padding: var(--space-5); }
+  .product-card__features { grid-template-columns: 1fr; }
+  .product-card__logo { width: 170px; }
+}

@@ -23,3 +23,7 @@ Passing DOM-only checks cover all ten pages and 223 discovery links/anchors, uni
 Browser review completed 14 October 2026 (built-in browser, local server on port 5195): Products menu by mouse and keyboard (Enter, Tab, Shift+Tab, Escape returns focus, outside click, focus leaving closes it); phone menu (opens, scrolls, Escape closes panel then menu, closed links not focusable); all ten pages at 375 and desktop widths with no horizontal scroll, broken images or console errors; header fits on one line at 1024 and 1366. Phase 3 is complete as a local preview. The live website will be redesigned and uploaded later; "Get a Quote" was removed from the header and should be reconsidered in that redesign.
 
 Existing unrelated website changes, page bodies, root redirect rules and policy text were preserved. No live signup domain, production trial claim or payment integration was introduced.
+
+## Superseded by the products hub (14 October 2026, branch `products-hub`)
+
+The Products dropdown panel was replaced by a plain **Products** link to a new `/products/` page (concept A: an industry filter and one card per product, plus a "more products" invitation and a custom-software call to action). Menu order: Home, About, Services, Products, Portfolio, Contact, then Get a Quote. The header and footer Products column are written by `tools/build-site-header.py`; `baylior-navigation.js`, `baylior-discovery.css`, `connect-baylior.py` and `check-baylior-navigation.cjs` were removed, and `site-navigation.js` now runs only the phone/tablet drawer.
