@@ -2,37 +2,64 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://trovotechsolutions.in/</loc>
-    <lastmod>2026-09-14</lastmod>
+    <lastmod>2026-10-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
     <loc>https://trovotechsolutions.in/about.html</loc>
-    <lastmod>2026-09-14</lastmod>
+    <lastmod>2026-10-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://trovotechsolutions.in/services.html</loc>
-    <lastmod>2026-09-14</lastmod>
+    <lastmod>2026-10-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://trovotechsolutions.in/projects.html</loc>
-    <lastmod>2026-09-14</lastmod>
+    <lastmod>2026-10-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://trovotechsolutions.in/contact.html</loc>
-    <lastmod>2026-09-14</lastmod>
+    <lastmod>2026-10-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://trovotechsolutions.in/privacy-policy/</loc>
+    <lastmod>2026-10-07</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://trovotechsolutions.in/data-deletion/</loc>
+    <lastmod>2026-10-07</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://trovotechsolutions.in/terms/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://trovotechsolutions.in/refund-policy/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- Phase 2: local preview only; do not publish until Phase 5 integration is verified. -->
   <url><loc>https://trovotechsolutions.in/products/baylior/</loc><lastmod>2026-10-14</lastmod><priority>0.8</priority></url>
 </urlset>

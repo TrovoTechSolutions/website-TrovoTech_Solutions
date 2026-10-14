@@ -9,13 +9,13 @@ Preview from the website root with a static server, then open `/products/baylior
 - `.htaccess` restricts Apache/LiteSpeed access to local requests; no production hosting settings have been changed.
 - `noindex,nofollow` and a prominent LOCAL PREVIEW banner identify the draft.
 - Every signup/pricing button is visibly labelled Preview link and targets the in-page placeholder explanation, including without JavaScript.
-- `destinations.js` has one destination setting with `integrationVerified: false` and an empty `signupOrigin`. Both must be deliberately configured after Phase 5 checks. HTTPS origins only; signup maps to `/signup`, pricing to `/`.
+- `/js/baylior-destinations.js` has one shared destination setting with `integrationVerified: false` and an empty `signupOrigin`. Both must be deliberately configured after Phase 5 checks. HTTPS origins only; signup maps to `/signup`, pricing to `/`.
 - Keep neutral Sign up wording, no fixed marketing prices or trial duration. Subscription screenshot amounts are demo data, not advertised prices. Production module/trial confirmation remains pending.
 - No E6 endorsement, customer counts, testimonials or one-click WhatsApp setup claim.
 
 ## Contents
 
-Hero, sticky product navigation, core feature blocks, job card/invoice examples, qualified modules, Windows/Android licences, onboarding steps, pricing teaser, FAQ, closing actions and installer contact fallback. Existing Trovo header/footer reused with root-relative links; shared site files are unchanged except the additive local sitemap entry.
+Hero, sticky product navigation, core feature blocks, job card/invoice examples, qualified modules, Windows/Android licences, onboarding steps, pricing teaser, FAQ, closing actions and installer contact fallback. Trovo header/footer use shared Phase 3 discovery navigation with root-relative links. See PHASE3.md.
 
 Assets are copied into `/assets/baylior/`; the page has no cross-repository asset dependency. The composed share card is PNG, exactly 1200×630, from the approved Baylior logo with original headline and platform copy. Open Graph and Twitter metadata use the intended canonical website paths; remote share scrapers will not see the image until release.
 

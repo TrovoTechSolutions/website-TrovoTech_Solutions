@@ -37,7 +37,8 @@ modules = [
  ('Audit trail','Review recorded actions such as invoice cancellations, payments and attendance changes.'),
  ('Showroom / B2B module','Manage dealership showroom work with staff, daily vehicle logs and dealer billing.'),
  ('Franchise network','View approved totals shared by your franchise branches.')]
-features = ''.join(f'<article class="b-feature"><span class="b-number">{n}</span><h3>{title}</h3><p>{desc}</p></article>' for n,title,desc in core)
+feature_ids = ['customers-vehicles', 'job-cards', 'billing-invoices', 'payments', 'staff', 'reports']
+features = ''.join(f'<article class="b-feature" id="{anchor}"><span class="b-number">{n}</span><h3>{title}</h3><p>{desc}</p></article>' for (n,title,desc),anchor in zip(core,feature_ids))
 modulehtml = ''.join(f'<article class="b-module"><p class="b-label">{"Professional, or add-on" if i<5 else "Add-on, any plan"}</p><h3>{title}</h3><p>{desc}</p></article>' for i,(title,desc) in enumerate(modules))
 faqs = [
  ('How does licensing work?','Each user needs a licence for Windows, Android or both. See the pricing page for current options.'),
@@ -80,6 +81,9 @@ html=f'''<!doctype html>
 <section class="b-section b-wrap b-closing"><p class="b-label">One suite. Every detail.</p><h2>Ready to get started?</h2><div class="b-actions">{action()}<a class="b-button b-outline" href="tel:+919042672148">Talk to us ↗</a></div></section>
 <aside id="preview-links" class="b-preview-links b-wrap" tabindex="-1"><h2>Preview links only</h2><p>Signup and pricing are not connected yet. Their web address will be chosen and verified in Phase 5. These buttons stay here until then.</p><p>For now, <a href="tel:+919042672148">talk to Trovo</a> or continue exploring this local preview.</p></aside>
 </main>{footer}</body></html>'''
+if 'bp-header' in header:
+    html = html.replace('</head>', '<link rel="stylesheet" href="/css/baylior-discovery.css?v=1"><script src="/js/baylior-navigation.js?v=1" defer></script><script src="/js/baylior-destinations.js?v=1" defer></script></head>')
+    html = html.replace('main.js?v=7', 'main.js?v=9')
 (page/'index.html').write_text(html,encoding='utf-8')
 # A composed, original share card from the approved logo. No invented app imagery.
 im=Image.new('RGB',(1200,630),'#0A0F1C'); d=ImageDraw.Draw(im)

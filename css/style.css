@@ -187,6 +187,13 @@ h4 { font-size: var(--fs-h4); font-weight: var(--fw-semibold); }
 .card--hover:hover .icon-box { background: var(--color-secondary); color: var(--color-text-invert); }
 
 .card h3 { margin-bottom: var(--space-3); }
+
+/* Whole card clickable: the heading link stretches over the card */
+.card--link { position: relative; }
+.card__link { color: inherit; }
+.card__link::after { content: ""; position: absolute; inset: 0; border-radius: inherit; }
+.card__link:focus-visible { outline: none; }
+.card--link:focus-within { outline: 2px solid var(--color-secondary); outline-offset: 2px; }
 .card p { color: var(--color-text-muted); font-size: var(--fs-sm); }
 
 /* Badges / chips */
@@ -251,7 +258,7 @@ h4 { font-size: var(--fs-h4); font-weight: var(--fw-semibold); }
 
 /* ---- Footer ---- */
 .footer {
-  background: var(--color-surface-alt);
+  background: #000000;
   color: var(--color-text-muted);
 }
 .footer__grid {
@@ -261,9 +268,10 @@ h4 { font-size: var(--fs-h4); font-weight: var(--fw-semibold); }
   padding-block: var(--space-8) var(--space-6);
 }
 .footer__about { max-width: 34ch; margin-block: var(--space-4); font-size: var(--fs-sm); }
-.footer h4 {
+.footer h2 {
   color: var(--color-text);
   font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
   text-transform: uppercase;
   letter-spacing: var(--tracking-wide);
   margin-bottom: var(--space-4);
@@ -366,7 +374,7 @@ h4 { font-size: var(--fs-h4); font-weight: var(--fw-semibold); }
 .mini-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-5); margin-top: var(--space-6); }
 .mini { display: flex; gap: var(--space-3); }
 .mini .material-symbols-outlined { color: var(--color-secondary); font-size: 1.75rem; }
-.mini h4 { color: var(--color-primary); margin-bottom: var(--space-1); }
+.mini h3 { font-size: var(--fs-h4); color: var(--color-primary); margin-bottom: var(--space-1); }
 .mini p { font-size: var(--fs-sm); color: var(--color-text-muted); }
 
 /* ---- Project cards ---- */
@@ -437,8 +445,9 @@ h4 { font-size: var(--fs-h4); font-weight: var(--fw-semibold); }
   border-radius: var(--radius-md);
   padding: var(--space-4);
 }
-.use-case span { display: block; font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: var(--tracking-wide); color: var(--color-text-muted); margin-bottom: var(--space-2); }
+.use-case > span { display: block; font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: var(--tracking-wide); color: var(--color-text-muted); margin-bottom: var(--space-2); }
 .use-case p { font-size: var(--fs-sm); font-style: italic; color: var(--color-text); }
+.use-case .link-arrow { margin-top: var(--space-3); }
 
 /* ---- Founder / bio split ---- */
 .founder__photo {
@@ -780,7 +789,7 @@ h4 { font-size: var(--fs-h4); font-weight: var(--fw-semibold); }
 .section--tight-top { padding-top: var(--space-6); }
 .contact-intro { text-align: center; max-width: 600px; margin: 0 auto var(--space-7); }
 .contact-intro p { color: var(--color-text-muted); font-size: 1.1rem; }
-.contact-left h3 { color: var(--color-secondary); font-size: 2rem; margin-bottom: var(--space-4); }
+.contact-left h2 { color: var(--color-secondary); font-size: 2rem; font-weight: var(--fw-semibold); letter-spacing: normal; margin-bottom: var(--space-4); }
 .contact-lead { color: var(--color-text); font-size: 1.1rem; line-height: var(--lh-normal); max-width: 90%; }
 .contact-info-item strong {
   display: block;

@@ -3,9 +3,9 @@ const fs = require('node:fs');
 const vm = require('node:vm');
 const assert = require('node:assert/strict');
 const path = require('node:path');
-const source = fs.readFileSync(path.join(__dirname, '../products/baylior/destinations.js'), 'utf8');
+const source = fs.readFileSync(path.join(__dirname, '../js/baylior-destinations.js'), 'utf8');
 function run(config) {
-  const links = ['signup','pricing'].map(kind => ({ dataset: {destination:kind}, href:'#preview-links', classList: {add() {}} }));
+  const links = ['signup','pricing'].map(kind => ({ dataset: {destination:kind}, href:'#preview-links', querySelectorAll: () => [] }));
   const code = config ? source.replace("{ integrationVerified: false, signupOrigin: '' }", JSON.stringify(config)) : source;
   vm.runInNewContext(code, {URL, document: { querySelector:()=>null, querySelectorAll:()=>links }});
   return links.map(link=>link.href);
