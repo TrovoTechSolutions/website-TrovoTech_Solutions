@@ -430,6 +430,7 @@ def update_hub_page(products):
             highlights.append(f'                <li><span class="material-symbols-outlined" aria-hidden="true">{h["icon"]}</span>{h["text"]}</li>')
         highlights_str = "\n".join(highlights)
 
+        card_action_label = p.get("cardSignupLabel", "Try now")
         card = f"""          <article class="product-card" data-industry="{ind_filter}" aria-labelledby="{slug}-card-title">
             <div>
               <span class="product-card__tag">{industry_tag}</span><br />
@@ -442,7 +443,7 @@ def update_hub_page(products):
               <p class="product-card__platforms">{platforms}</p>
               <div class="product-card__actions">
                 <a class="bp-action" href="/products/{slug}/">Explore {name}</a>
-                <a class="bp-action bp-action--outline" data-destination="signup" data-product="{platform_key}" data-baylior-destination="signup" href="/products/{slug}/#preview-links">Sign up<small class="bp-placeholder">Preview link</small></a>
+                <a class="bp-action bp-action--outline" data-destination="signup" data-product="{platform_key}" data-baylior-destination="signup" href="/products/{slug}/#preview-links">{card_action_label}<small class="bp-placeholder">Preview link</small></a>
               </div>
             </div>
             <a class="product-card__shot" href="/products/{slug}/" aria-label="Explore {name}">
@@ -452,8 +453,10 @@ def update_hub_page(products):
         cards_html.append(card)
 
     cards_str = "\n\n".join(cards_html)
+    # Documented extension point for optional Zoho-style featured panel:
+    extension_point = "<!-- EXTENSION POINT: Optional Zoho-style featured product banner/panel (not built now; render here if product.get('featured')) -->\n"
     grid_pattern = r'(<div class="products-grid"[^>]*>\s*)(.*?)(<div class="products-next">)'
-    grid_replacement = rf'\1{cards_str}\n\n          \3'
+    grid_replacement = rf'\1{extension_point}          {cards_str}\n\n          \3'
     html, count = re.subn(grid_pattern, grid_replacement, html, count=1, flags=re.S)
     if count != 1:
         raise ValueError("Could not update products-grid in products/index.html")
