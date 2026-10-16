@@ -292,12 +292,13 @@ def render_product_page(product, site_header_html, site_footer_products_html):
 <meta property="og:image:width" content="{seo.get("ogImageWidth", 1200)}"><meta property="og:image:height" content="{seo.get("ogImageHeight", 630)}"><meta property="og:image:alt" content="{seo.get("ogImageAlt", "")}">
 <meta name="twitter:card" content="{seo.get("twitterCard", "summary_large_image")}"><meta name="twitter:title" content="{seo.get("twitterTitle", "")}"><meta name="twitter:description" content="{seo.get("twitterDescription", "")}"><meta name="twitter:image" content="{seo.get("twitterImage", "")}">
 <link rel="icon" type="image/svg+xml" href="{seo.get("icon", logos.get("icon", ""))}">
-<link rel="stylesheet" href="/css/variables.css?v=8"><link rel="stylesheet" href="/css/style.css?v=8"><link rel="stylesheet" href="/css/responsive.css?v=8"><link rel="stylesheet" href="/css/product-page.css?v=1"><link rel="stylesheet" href="./baylior.css">
+<link rel="stylesheet" href="/css/variables.css?v=8"><link rel="stylesheet" href="/css/style.css?v=8"><link rel="stylesheet" href="/css/responsive.css?v=8"><link rel="stylesheet" href="/css/product-page.css?v=1">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&amp;display=swap" rel="stylesheet">
 <script type="application/ld+json">{json_ld}</script>
-<script src="/js/product-page.js?v=1" defer></script><script src="./destinations.js" defer></script><script src="/js/main.js?v=9" defer></script><script src="/js/product-destinations.js?v=1" defer></script><script src="/js/baylior-destinations.js?v=1" defer></script>
+<script src="/js/product-page.js?v=1" defer></script><script src="/js/main.js?v=9" defer></script>
   <link rel="stylesheet" href="/css/products.css?v=1">
   <script src="/js/site-navigation.js?v=1" defer></script>
+  <script src="/js/product-destinations.js?v=1" defer></script>
 </head><body>
 <a href="#main" class="skip-link">Skip to content</a>{site_header_html}
 <main id="main" class="product-page {slug}"{style_attr}>
@@ -496,8 +497,8 @@ def update_site_headers_and_footers(products):
     # Ensure product-destinations.js is in HEAD_INCLUDES
     if '<script src="/js/product-destinations.js?v=1" defer></script>' not in bsh_code:
         bsh_code = bsh_code.replace(
-            "'<script src=\"/js/baylior-destinations.js?v=1\" defer></script>',",
-            "'<script src=\"/js/baylior-destinations.js?v=1\" defer></script>',\n    '<script src=\"/js/product-destinations.js?v=1\" defer></script>',"
+            "HEAD_INCLUDES = [",
+            "HEAD_INCLUDES = [\n    '<script src=\"/js/product-destinations.js?v=1\" defer></script>',"
         )
 
     bsh_file.write_text(bsh_code, encoding="utf-8")

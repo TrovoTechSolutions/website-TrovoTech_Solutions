@@ -46,7 +46,7 @@ HEAD_INCLUDES = [
     '<script src="/js/product-destinations.js?v=1" defer></script>',
 ]
 RETIRED_INCLUDES = re.compile(
-    r'[ \t]*<(?:link[^>]*baylior-discovery\.css|script[^>]*(?:baylior-navigation\.js|baylior-destinations\.js))[^>]*>(?:</script>)?\n?'
+    r'[ \t]*<(?:link[^>]*(?:baylior-discovery\.css|baylior\.css)|script[^>]*(?:baylior-navigation\.js|baylior-destinations\.js|destinations\.js))[^>]*>(?:</script>)?\n?'
 )
 
 

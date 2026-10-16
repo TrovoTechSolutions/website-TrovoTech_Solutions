@@ -18,6 +18,7 @@ import json
 import hashlib
 import xml.etree.ElementTree as ET
 import subprocess
+import re
 from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -94,6 +95,22 @@ def check_product_page(slug, data):
             if "data-product" in attrs:
                 assert attrs["data-product"] == data.get("platformKey", slug)
 
+    # 3b. Check destinations scripts and legacy baylior-* files
+    script_srcs = [attrs["src"] for tag, attrs in p.nodes if tag == "script" and "src" in attrs]
+    dest_scripts = [s for s in script_srcs if "destination" in s.lower()]
+    assert len(dest_scripts) == 1, f"Generated page {slug} must load exactly one destinations script, found {len(dest_scripts)}: {dest_scripts}"
+
+    loaded_resources = [attrs.get("src") or attrs.get("href") for tag, attrs in p.nodes if (tag == "script" and "src" in attrs) or (tag == "link" and "href" in attrs)]
+    legacy_files = [
+        r for r in loaded_resources
+        if r and (
+            re.search(r'baylior-[^/?#]+\.(?:js|css)', r) or
+            re.search(r'(?:^|/)baylior\.(?:js|css)', r) or
+            re.search(r'(?:^|/)destinations\.js', r)
+        )
+    ]
+    assert len(legacy_files) == 0, f"Generated page {slug} loads legacy baylior file(s): {legacy_files}"
+
     # 4. JSON-LD SoftwareApplication schema without prices or offers
     schemas = __import__("re").findall(r'<script type="application/ld\+json">(.*?)</script>', html, __import__("re").S)
     assert len(schemas) >= 1, f"Missing JSON-LD in {slug}"
@@ -159,6 +176,23 @@ def check_sitemap_and_draft_isolation(active_products, draft_products):
         draft_name = draft_data.get("name", "")
         if draft_name and not draft_name.startswith("TODO"):
             assert draft_name not in hub_html, f"Draft product name {draft_name} leaked into hub"
+
+    # Hub page single-destinations and legacy file check
+    hub_p = Parser()
+    hub_p.feed(hub_html)
+    hub_scripts = [attrs["src"] for tag, attrs in hub_p.nodes if tag == "script" and "src" in attrs]
+    hub_dest = [s for s in hub_scripts if "destination" in s.lower()]
+    assert len(hub_dest) == 1, f"Hub page must load exactly 1 destinations script, got {hub_dest}"
+    hub_loaded = [attrs.get("src") or attrs.get("href") for tag, attrs in hub_p.nodes if (tag == "script" and "src" in attrs) or (tag == "link" and "href" in attrs)]
+    hub_legacy = [
+        r for r in hub_loaded
+        if r and (
+            re.search(r'baylior-[^/?#]+\.(?:js|css)', r) or
+            re.search(r'(?:^|/)baylior\.(?:js|css)', r) or
+            re.search(r'(?:^|/)destinations\.js', r)
+        )
+    ]
+    assert len(hub_legacy) == 0, f"Hub page loads legacy file(s): {hub_legacy}"
 
 
 def check_generator_idempotence():

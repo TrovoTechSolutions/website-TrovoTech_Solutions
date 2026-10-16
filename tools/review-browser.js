@@ -1,6 +1,8 @@
 // Automated browser review using Chrome DevTools Protocol via native WebSocket
 const { spawn } = require('node:child_process');
 const http = require('node:http');
+const fs = require('node:fs');
+const path = require('node:path');
 
 const CHROME = 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe';
 const PORT = 9333;
@@ -110,6 +112,13 @@ async function main() {
         console.log(`[PASS: ${noScroll}] ${pageUrl} @ ${width}px -> scrollWidth: ${scrollWidth}, clientWidth: ${clientWidth}`);
         if (!noScroll) {
           throw new Error(`Horizontal scroll detected on ${pageUrl} at ${width}px!`);
+        }
+
+        if (pageUrl.includes('/products/baylior/')) {
+          const shot = await send('Page.captureScreenshot', { format: 'png' });
+          const outPath = path.join(__dirname, `../products/_screenshots/baylior-after-${width}.png`);
+          fs.writeFileSync(outPath, Buffer.from(shot.data, 'base64'));
+          console.log(`  Saved screenshot: ${outPath}`);
         }
       }
     }
