@@ -339,7 +339,8 @@ h4 { font-size: var(--fs-h4); font-weight: var(--fw-semibold); }
 .page-hero { padding-top: calc(var(--space-9) + var(--space-6)); padding-bottom: var(--section-y); }
 .page-hero__inner { max-width: 720px; }
 .page-hero__inner--wide { max-width: var(--container-max); }
-.page-hero__inner--wide .lead { max-width: 100%; }
+.page-hero__inner--wide h1 { text-wrap: balance; }
+.page-hero__inner--wide .lead { max-width: 100%; text-wrap: pretty; }
 .page-hero h1 { font-size: var(--fs-display); margin-block: var(--space-4); }
 .page-hero h1 span { color: var(--color-secondary); }
 
@@ -352,12 +353,13 @@ h4 { font-size: var(--fs-h4); font-weight: var(--fw-semibold); }
   display: inline-flex;
   align-items: center;
   gap: var(--space-2);
-  padding: 0.5rem 1rem;
+  padding: 0.45rem 0.9rem;
   border-radius: var(--radius-pill);
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   font-size: var(--fs-sm);
   font-weight: var(--fw-medium);
+  white-space: nowrap;
 }
 .pill .material-symbols-outlined { color: var(--color-secondary); font-size: 1.125rem; }
 
