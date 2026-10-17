@@ -194,7 +194,7 @@ h4 { font-size: var(--fs-h4); font-weight: var(--fw-semibold); }
 .card__link::after { content: ""; position: absolute; inset: 0; border-radius: inherit; }
 .card__link:focus-visible { outline: none; }
 .card--link:focus-within { outline: 2px solid var(--color-secondary); outline-offset: 2px; }
-.card p { color: var(--color-text-muted); font-size: var(--fs-sm); }
+.card p { color: var(--color-text-muted); font-size: var(--fs-sm); text-align: justify; text-justify: inter-word; }
 
 /* Badges / chips */
 .badge {
@@ -340,7 +340,7 @@ h4 { font-size: var(--fs-h4); font-weight: var(--fw-semibold); }
 .page-hero__inner { max-width: 720px; }
 .page-hero__inner--wide { max-width: var(--container-max); }
 .page-hero__inner--wide h1 { text-wrap: balance; }
-.page-hero__inner--wide .lead { max-width: 100%; text-wrap: pretty; }
+.page-hero__inner--wide .lead { max-width: 100%; text-wrap: pretty; text-align: justify; text-justify: inter-word; }
 .page-hero h1 { font-size: var(--fs-display); margin-block: var(--space-4); }
 .page-hero h1 span { color: var(--color-secondary); }
 
@@ -472,7 +472,8 @@ h4 { font-size: var(--fs-h4); font-weight: var(--fw-semibold); }
   aspect-ratio: 1 / 1;
 }
 .founder__photo img { width: 100%; height: 100%; object-fit: cover; }
-.quote { font-size: var(--fs-lg); font-style: italic; color: var(--color-primary); line-height: var(--lh-normal); margin-bottom: var(--space-5); }
+.quote { font-size: var(--fs-lg); font-style: italic; color: var(--color-primary); line-height: var(--lh-normal); margin-bottom: var(--space-5); text-align: justify; text-justify: inter-word; }
+.split p { text-align: justify; text-justify: inter-word; }
 .stats-row { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-5); border-top: 1px solid var(--color-border); padding-top: var(--space-6); margin-top: var(--space-6); }
 .stat strong { display: block; font-size: var(--fs-h3); color: var(--color-primary); }
 .stat span { font-size: var(--fs-sm); color: var(--color-text-muted); }
