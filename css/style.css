@@ -338,8 +338,8 @@ h4 { font-size: var(--fs-h4); font-weight: var(--fw-semibold); }
 /* Page hero (interior pages, single column) */
 .page-hero { padding-top: calc(var(--space-9) + var(--space-6)); padding-bottom: var(--section-y); }
 .page-hero__inner { max-width: 720px; }
-.page-hero__inner--wide { max-width: 100%; }
-.page-hero__inner--wide .lead { max-width: 1060px; }
+.page-hero__inner--wide { max-width: var(--container-max); }
+.page-hero__inner--wide .lead { max-width: 100%; }
 .page-hero h1 { font-size: var(--fs-display); margin-block: var(--space-4); }
 .page-hero h1 span { color: var(--color-secondary); }
 
