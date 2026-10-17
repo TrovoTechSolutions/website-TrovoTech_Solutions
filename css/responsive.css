@@ -27,16 +27,64 @@
   .cta { padding: var(--space-7) var(--space-5); }
 }
 
+/* Default backdrop hidden on desktop */
+.nav-backdrop { display: none; }
+
 /* ---------------- NAV: hamburger + right-side drawer (< 1024px) ---------------- */
 /* The full brand lockup + 5 links + button need a wide viewport, so below 1024px
    we switch to a slide-in drawer from the RIGHT instead of crowding the bar. */
 @media (max-width: 1023px) {
-  .nav-toggle { display: inline-flex; position: relative; z-index: 60; }
+  .nav-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 0.5rem;
+    margin: -0.5rem;
+    background: transparent;
+    border: none;
+    color: var(--color-primary);
+    cursor: pointer;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    position: relative;
+    z-index: 80;
+  }
+  .nav-toggle .material-symbols-outlined {
+    pointer-events: none;
+    user-select: none;
+    font-size: 28px;
+    line-height: 1;
+  }
   .navbar .btn { display: none; }
   .brand-lockup__icon { height: 52px; }   /* trim the oversized logo */
 
+  /* Backdrop overlay when the drawer is open */
+  .nav-backdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    z-index: 65;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--transition);
+  }
+  .nav-backdrop.is-open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* Prevent background scrolling when drawer is open */
+  body.nav-open {
+    overflow: hidden;
+  }
+
   /* Full-height drawer from the right, BLACK to match the header (#000) so it
-     reads as one continuous panel. The X (z-index 60) stays on top; links are
+     reads as one continuous panel. The X (z-index 80) stays on top; links are
      padded down to clear the navbar/logo row. */
   .nav-links {
     position: fixed;
@@ -44,7 +92,7 @@
     right: 0;
     bottom: 0;
     width: min(80vw, 300px);
-    z-index: 45;
+    z-index: 70;
     flex-direction: column;
     align-items: flex-start;
     gap: var(--space-5);
@@ -55,6 +103,7 @@
     transform: translateX(100%);
     transition: transform var(--transition);
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
   .nav-links.is-open { transform: translateX(0); }
 }
