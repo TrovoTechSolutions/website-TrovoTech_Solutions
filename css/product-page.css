@@ -1,0 +1,867 @@
+/* ==========================================================================
+   Trovo Tech Solutions — Product Page System Stylesheet
+   Generalised from Baylior landing page styles to support any SaaS product.
+   Per-product accent colours are controlled via CSS variables.
+   ========================================================================== */
+
+.product-page,
+.baylior {
+  --p-primary: var(--product-primary, #2d6bff);
+  --p-secondary: var(--product-secondary, #14c8f0);
+  --p-highlight: var(--product-highlight, #dc74fa);
+  --p-night: var(--product-night, #0a0f1c);
+  --p-panel: var(--product-panel, #121a2b);
+  --p-line: var(--product-line, #29364d);
+  --p-text: var(--product-text, #edf3ff);
+  --p-muted: var(--product-muted, #b0bdd3);
+  --p-gradient: var(--product-gradient, linear-gradient(110deg, var(--p-primary), var(--p-secondary)));
+
+  /* Backwards-compatible aliases for existing selectors */
+  --b-blue: var(--p-primary);
+  --b-cyan: var(--p-secondary);
+  --b-muted: var(--p-muted);
+
+  background: var(--p-night);
+  color: var(--p-text);
+  font-family: Inter, system-ui, sans-serif;
+  overflow: clip;
+}
+
+.product-page *,
+.baylior * {
+  box-sizing: border-box;
+}
+
+.b-wrap {
+  width: min(1200px, calc(100% - 64px));
+  margin-inline: auto;
+}
+
+.product-page h1,
+.product-page h2,
+.product-page h3,
+.product-page p,
+.baylior h1,
+.baylior h2,
+.baylior h3,
+.baylior p {
+  margin: 0;
+}
+
+.product-page h1,
+.baylior h1 {
+  font-size: clamp(44px, 4.7vw, 68px);
+  font-weight: 800;
+  line-height: 1.06;
+  letter-spacing: -0.055em;
+}
+
+.product-page h2,
+.baylior h2 {
+  font-size: clamp(32px, 3.3vw, 47px);
+  font-weight: 700;
+  line-height: 1.13;
+  letter-spacing: -0.04em;
+}
+
+.product-page h3,
+.baylior h3 {
+  font-size: 19px;
+  line-height: 1.35;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+}
+
+.product-page h1 span,
+.product-page h2 span,
+.baylior h1 span,
+.baylior h2 span {
+  color: var(--p-secondary);
+}
+
+.product-page p,
+.baylior p {
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--p-muted);
+}
+
+.product-page a,
+.baylior a {
+  color: inherit;
+}
+
+.product-page a:focus-visible,
+.product-page summary:focus-visible,
+.baylior a:focus-visible,
+.baylior summary:focus-visible {
+  outline: 3px solid var(--p-secondary);
+  outline-offset: 5px;
+  border-radius: 5px;
+}
+
+/* ============================ Local preview banner ============================ */
+.b-preview {
+  background: #171e30;
+  border-bottom: 1px solid #2c3b55;
+  padding: 12px 0;
+  color: #c8d3e5;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.b-preview strong {
+  color: #7de2f7;
+  letter-spacing: 0.1em;
+  margin-right: 18px;
+}
+
+/* ============================ Hero ============================ */
+.b-hero {
+  padding-top: 58px;
+  padding-bottom: 82px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.b-lockup {
+  width: 182px;
+  height: auto;
+  margin-bottom: 32px;
+}
+
+.product-page .b-label,
+.baylior .b-label {
+  font-size: 11px;
+  line-height: 1.6;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #80ddef;
+  margin-bottom: 18px;
+}
+
+.b-hero h1 {
+  margin-bottom: 23px;
+}
+
+.product-page .b-tagline,
+.baylior .b-tagline {
+  font-size: 21px;
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  margin-bottom: 18px;
+}
+
+.product-page .b-tagline span,
+.baylior .b-tagline span {
+  color: var(--p-highlight);
+}
+
+.product-page .b-lead,
+.baylior .b-lead {
+  font-size: 17px;
+  max-width: 48ch;
+}
+
+.b-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 28px;
+}
+
+.b-button {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 12px 22px;
+  border-radius: 9px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.25;
+  text-align: center;
+  transition: transform 0.18s, background 0.18s;
+  white-space: nowrap;
+}
+
+.b-button:hover {
+  transform: translateY(-2px);
+}
+
+.b-primary {
+  background: var(--p-gradient);
+  color: #071122 !important;
+  box-shadow: 0 6px 28px rgba(45, 107, 255, 0.14);
+}
+
+.b-outline {
+  border: 1px solid #3c4b65;
+  background: #131d30;
+  color: #f2f6ff !important;
+}
+
+.b-outline:hover {
+  background: #1c2a43;
+}
+
+.b-placeholder {
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-top: 5px;
+  font-weight: 600;
+  opacity: 0.85;
+}
+
+.b-placeholder[hidden],
+.b-live .b-placeholder {
+  display: none !important;
+}
+
+.b-text-link {
+  font-size: 14px;
+  text-underline-offset: 5px;
+  padding: 12px 4px;
+}
+
+.product-page .b-meta,
+.baylior .b-meta {
+  font-size: 11px;
+  margin-top: 24px;
+}
+
+.b-meta span {
+  color: #536079;
+  margin: 0 10px;
+}
+
+.b-hero-visual {
+  position: relative;
+  padding: 35px 0 0;
+}
+
+.b-glow-logo {
+  display: block;
+  width: 170px;
+  height: 170px;
+  object-fit: contain;
+  margin: 0 auto 22px;
+  filter: drop-shadow(0 0 30px rgba(45, 107, 255, 0.21));
+}
+
+.b-visual-label {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 12px;
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  color: #9cacbe;
+}
+
+.b-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--p-secondary);
+  box-shadow: 0 0 14px rgba(20, 200, 240, 0.4);
+}
+
+.b-shot {
+  margin: 0;
+  min-width: 0;
+}
+
+.b-shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid #39465d;
+  border-radius: 12px;
+  box-shadow: 0 18px 65px rgba(0, 0, 0, 0.25);
+}
+
+.b-shot a {
+  display: block;
+}
+
+.b-shot figcaption {
+  font-size: 11px;
+  color: #9eafc7;
+  margin-top: 13px;
+  text-align: center;
+}
+
+/* ============================ Sticky Product Sub-Header ============================ */
+.b-product-nav {
+  position: sticky;
+  top: 80px;
+  z-index: 30;
+  background: rgba(12, 19, 34, 0.96);
+  backdrop-filter: blur(16px);
+  border-block: 1px solid #26334a;
+}
+
+.b-product-nav > .b-wrap {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  min-height: 82px;
+}
+
+.b-nav-brand {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 22px;
+  font-weight: 800;
+  text-decoration: none;
+  letter-spacing: -0.04em;
+}
+
+.b-nav-links {
+  display: flex;
+  gap: 24px;
+  flex: 1;
+  justify-content: center;
+}
+
+.b-nav-links a {
+  font-size: 12px;
+  text-decoration: none;
+  color: #b8c5d9;
+  white-space: nowrap;
+  padding: 15px 0;
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.b-nav-links a:hover,
+.b-nav-links a.is-active,
+.b-nav-links a[aria-current="true"] {
+  color: var(--p-secondary);
+  border-bottom-color: var(--p-secondary);
+}
+
+.b-product-nav .b-button {
+  font-size: 12px;
+  min-height: 44px;
+  padding: 8px 21px;
+}
+
+/* ============================ Sections ============================ */
+.b-section {
+  padding-block: 92px;
+  scroll-margin-top: 180px;
+}
+
+.b-hero,
+.b-preview-links {
+  scroll-margin-top: 180px;
+}
+
+.b-section-head {
+  max-width: 650px;
+  margin-bottom: 42px;
+}
+
+.b-section-head > p:last-child {
+  margin-top: 22px;
+  max-width: 54ch;
+}
+
+/* Feature grid */
+.b-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border-top: 1px solid #29354b;
+}
+
+.b-feature {
+  padding: 32px 30px 36px 0;
+  border-bottom: 1px solid #29354b;
+}
+
+.b-feature:not(:nth-child(3n + 1)) {
+  padding-left: 30px;
+  border-left: 1px solid #29354b;
+}
+
+.b-number {
+  font-size: 11px;
+  font-family: monospace;
+  color: #70d9ee;
+  display: block;
+  margin-bottom: 26px;
+}
+
+.b-feature h3 {
+  margin-bottom: 12px;
+}
+
+.b-feature p,
+.b-module p {
+  font-size: 14px;
+}
+
+/* Split showcase and alternating layouts */
+.b-tint {
+  background: #101827;
+  border-block: 1px solid #1f2c43;
+}
+
+.b-split {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.b-split h2 {
+  margin-bottom: 23px;
+}
+
+.b-split--reverse {
+  grid-template-columns: 1.2fr 0.8fr;
+}
+.b-split--reverse > :first-child {
+  order: 2;
+}
+.b-split--reverse > :last-child {
+  order: 1;
+}
+
+.product-page .b-note,
+.baylior .b-note {
+  font-size: 12px;
+  margin-top: 24px;
+  color: #93a5c0;
+}
+
+.b-invoice {
+  max-width: 950px;
+  margin-top: 56px;
+}
+
+/* Modules */
+.b-modules {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.b-module {
+  padding: 27px;
+  background: var(--p-panel);
+  border: 1px solid #26334b;
+  border-radius: 12px;
+}
+
+.b-module .b-label {
+  font-size: 9px;
+  letter-spacing: 0.09em;
+  margin-bottom: 17px;
+}
+
+.b-module h3 {
+  margin-bottom: 10px;
+}
+
+/* Platform badges */
+.b-platforms {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 28px;
+}
+
+.b-platforms span {
+  font-size: 12px;
+  padding: 9px 14px;
+  border: 1px solid #324159;
+  border-radius: 6px;
+  color: #d6e4f6;
+}
+
+/* How it works */
+.b-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 42px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.b-steps li {
+  border-top: 1px solid #34506b;
+  padding-top: 22px;
+}
+
+.b-steps span {
+  display: block;
+  color: var(--p-secondary);
+  font-size: 32px;
+  letter-spacing: -0.04em;
+  margin-bottom: 30px;
+}
+
+.b-steps h3 {
+  margin-bottom: 12px;
+}
+
+/* Pricing teaser (text-only, NO prices) */
+.b-pricing {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 48px;
+  border: 1px solid #2c4769;
+  background: radial-gradient(ellipse at 100% 0, rgba(45, 107, 255, 0.12), transparent 70%), var(--p-panel);
+  border-radius: 20px;
+}
+
+.b-pricing p:last-child {
+  margin-top: 20px;
+}
+
+/* FAQ */
+.b-faq-layout {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 70px;
+}
+
+.b-faq details {
+  border-bottom: 1px solid #2c3850;
+}
+
+.b-faq summary {
+  padding: 23px 28px 23px 0;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  list-style: none;
+  position: relative;
+}
+
+.b-faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.b-faq summary::after {
+  content: '+';
+  position: absolute;
+  right: 0;
+  color: var(--p-secondary);
+  font-size: 20px;
+}
+
+.b-faq details[open] summary::after {
+  content: '−';
+}
+
+.b-faq details p {
+  padding-bottom: 24px;
+  font-size: 14px;
+}
+
+.b-faq p a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Get the app */
+.b-download {
+  display: flex;
+  gap: 26px;
+  align-items: center;
+  padding: 35px 0;
+  border-block: 1px solid #2b3950;
+}
+
+.b-download > div {
+  flex: 1;
+}
+
+.b-download h2 {
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.b-download .b-label {
+  margin-bottom: 8px;
+}
+
+/* Closing */
+.b-closing {
+  text-align: center;
+  padding-top: 30px;
+}
+
+.b-closing .b-actions {
+  justify-content: center;
+}
+
+/* Preview links explanation */
+.b-preview-links {
+  border: 1px dashed #4b668b;
+  padding: 25px 30px;
+  border-radius: 10px;
+  margin-bottom: 64px;
+  background: #131d30;
+}
+
+.b-preview-links h2 {
+  font-size: 20px;
+  margin-bottom: 14px;
+}
+
+.b-preview-links p {
+  font-size: 13px;
+}
+
+.b-preview-links:target {
+  outline: 3px solid var(--p-secondary);
+  outline-offset: 5px;
+}
+
+.b-preview-links a {
+  text-decoration: underline;
+}
+
+/* ============================ Responsive ============================ */
+@media (min-width: 1600px) {
+  .b-hero {
+    padding-block: 80px 100px;
+  }
+}
+
+@media (max-width: 1050px) {
+  .b-hero {
+    gap: 30px;
+  }
+  .b-nav-links {
+    gap: 16px;
+  }
+  .b-product-nav > .b-wrap {
+    gap: 20px;
+  }
+  .b-split,
+  .b-faq-layout {
+    gap: 36px;
+  }
+  .b-feature-grid,
+  .b-modules {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .b-feature:not(:nth-child(3n + 1)) {
+    border-left: 0;
+    padding-left: 0;
+  }
+  .b-feature:nth-child(even) {
+    border-left: 1px solid #29354b;
+    padding-left: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .b-wrap {
+    width: calc(100% - 36px);
+  }
+  .b-preview {
+    font-size: 11px;
+  }
+  .b-preview strong {
+    display: block;
+    margin-bottom: 3px;
+  }
+  .b-hero {
+    grid-template-columns: 1fr;
+    padding-block: 38px 48px;
+    gap: 20px;
+  }
+  .product-page h1,
+  .baylior h1 {
+    font-size: 49px;
+  }
+  .b-lockup {
+    width: 160px;
+    margin-bottom: 28px;
+  }
+  .b-hero-visual {
+    padding-top: 4px;
+  }
+  .b-glow-logo {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 8px;
+  }
+  .b-hero-visual .b-shot img {
+    border-radius: 8px;
+  }
+  .b-product-nav {
+    top: 72px;
+  }
+  .b-product-nav > .b-wrap {
+    display: flex;
+    gap: 12px;
+    min-height: 64px;
+    padding-block: 0;
+  }
+  .b-nav-brand {
+    font-size: 17px;
+    flex-shrink: 0;
+  }
+  .b-nav-links {
+    min-width: 0;
+    flex: 1;
+    justify-content: flex-start;
+    overflow-x: auto;
+    gap: 18px;
+    scrollbar-width: thin;
+    padding-block: 3px;
+  }
+  .b-nav-links a {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+    padding-block: 8px;
+    font-size: 11px;
+    flex-shrink: 0;
+  }
+  .b-product-nav .b-button {
+    flex-shrink: 0;
+    padding: 7px 12px;
+    min-height: 44px;
+  }
+  .b-section {
+    padding-block: 56px;
+    scroll-margin-top: 190px;
+  }
+  .b-section-head {
+    margin-bottom: 30px;
+  }
+  .b-feature-grid,
+  .b-modules,
+  .b-steps {
+    grid-template-columns: 1fr;
+  }
+  .b-feature {
+    padding-block: 25px;
+  }
+  .b-feature:nth-child(even) {
+    border-left: 0;
+    padding-left: 0;
+  }
+  .b-number {
+    margin-bottom: 13px;
+  }
+  .b-split,
+  .b-faq-layout {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .b-invoice {
+    margin-top: 35px;
+  }
+  .b-module {
+    padding: 24px;
+  }
+  .b-steps {
+    gap: 28px;
+  }
+  .b-steps span {
+    margin-bottom: 14px;
+    font-size: 26px;
+  }
+  .b-pricing {
+    padding: 28px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+  }
+  .b-pricing h2 {
+    font-size: 31px;
+  }
+  .b-download {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .b-download img {
+    width: 48px;
+    height: 48px;
+  }
+  .b-download > div {
+    flex-basis: calc(100% - 68px);
+  }
+  .b-download > .b-button {
+    margin-left: 68px;
+  }
+  .b-closing {
+    padding-top: 20px;
+  }
+  .b-preview-links {
+    padding: 22px;
+  }
+  .b-meta span {
+    display: none;
+  }
+  .product-page .b-meta,
+  .baylior .b-meta {
+    max-width: 32ch;
+  }
+  .b-button {
+    padding-inline: 18px;
+  }
+  .b-hero h1 {
+    letter-spacing: -0.05em;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .product-page *,
+  .baylior * {
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+}
+
+/* Header tracking using product-neutral CSS variable with legacy fallback */
+.product-page,
+.baylior {
+  padding-top: var(--product-site-header-height, var(--baylior-header-height, 110px));
+}
+
+.b-product-nav {
+  top: var(--product-site-header-height, var(--baylior-header-height, 110px));
+}
+
+.b-section,
+.b-hero,
+.b-preview-links {
+  scroll-margin-top: calc(var(--product-site-header-height, var(--baylior-header-height, 110px)) + var(--product-nav-height, var(--baylior-product-height, 84px)) + 16px);
+}
+
+@media (max-width: 768px) {
+  .product-page,
+  .baylior {
+    --product-nav-height: 64px;
+    --baylior-product-height: 64px;
+  }
+  .b-nav-links:focus-within {
+    outline-offset: 2px;
+  }
+}

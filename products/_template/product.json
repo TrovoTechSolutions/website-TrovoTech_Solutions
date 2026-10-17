@@ -1,0 +1,286 @@
+{
+  "slug": "TODO-product-slug",
+  "platformKey": "TODO-platform-key",
+  "status": "draft",
+  "name": "TODO: Product Name",
+  "shortName": "TODO: Short Name",
+  "industry": "TODO: Industry Category (e.g. Construction & Civil)",
+  "industryFilter": "TODO-industry-filter-slug",
+  "tagline": "TODO: One-line product tagline.",
+  "heroLabel": "TODO: Built for [Target Audience]",
+  "headline": {
+    "main": "TODO: Primary headline sentence<br>on ",
+    "highlight": "emphasised phrase."
+  },
+  "subline": {
+    "text": "TODO: Supporting subline. ",
+    "highlight": "Key highlight."
+  },
+  "description": "TODO: 2-3 sentence description of what the software does, who it is for, and which platforms it supports.",
+  "platforms": [
+    "Windows",
+    "Android"
+  ],
+  "meta": "Windows · Android <span> / </span> A product of Trovo Tech Solutions",
+  "accentColours": {
+    "primary": "#2d6bff",
+    "secondary": "#14c8f0",
+    "highlight": "#dc74fa",
+    "night": "#0a0f1c",
+    "panel": "#121a2b",
+    "line": "#29364d",
+    "text": "#edf3ff",
+    "muted": "#b0bdd3",
+    "gradient": "linear-gradient(110deg, #2d6bff, #14c8f0)"
+  },
+  "logoFiles": {
+    "onDark": "/assets/TODO/lockup-on-dark.svg",
+    "onLight": "/assets/TODO/lockup-on-light.svg",
+    "mark": "/assets/TODO/mark.svg",
+    "icon": "/assets/TODO/icon.svg",
+    "width": 240,
+    "height": 64
+  },
+  "heroVisual": {
+    "glowLogo": {
+      "src": "/assets/TODO/logo-glow.webp",
+      "width": 280,
+      "height": 280,
+      "alt": ""
+    },
+    "visualLabel": "TODO: BRAND MOTTO",
+    "screenshot": {
+      "src": "/assets/TODO/dashboard.png",
+      "width": 1387,
+      "height": 810,
+      "alt": "TODO: Descriptive alt text for app dashboard screenshot",
+      "caption": "Real app · Demo data",
+      "fetchpriority": "high"
+    }
+  },
+  "cardImage": {
+    "src": "/assets/TODO/dashboard.png",
+    "width": 1387,
+    "height": 810,
+    "alt": "TODO: Descriptive alt text for product card"
+  },
+  "cardHighlights": [
+    {
+      "icon": "inventory_2",
+      "text": "TODO: Feature 1 highlight"
+    },
+    {
+      "icon": "receipt_long",
+      "text": "TODO: Feature 2 highlight"
+    },
+    {
+      "icon": "monitoring",
+      "text": "TODO: Feature 3 highlight"
+    },
+    {
+      "icon": "groups",
+      "text": "TODO: Feature 4 highlight"
+    }
+  ],
+  "sectionBar": [
+    {
+      "id": "features",
+      "label": "Features"
+    },
+    {
+      "id": "platforms",
+      "label": "Windows & Android"
+    },
+    {
+      "id": "how-it-works",
+      "label": "How it works"
+    },
+    {
+      "id": "pricing",
+      "label": "Pricing"
+    },
+    {
+      "id": "faq",
+      "label": "FAQ"
+    }
+  ],
+  "features": {
+    "id": "features",
+    "label": "TODO: Feature section eyebrow",
+    "headline": {
+      "main": "TODO: Feature headline.<br>",
+      "highlight": "Emphasised highlight."
+    },
+    "lead": "TODO: Introductory paragraph explaining core capabilities.",
+    "items": [
+      {
+        "id": "feature-1",
+        "number": "01",
+        "title": "TODO: Feature 1 Title",
+        "description": "TODO: Description of feature 1."
+      },
+      {
+        "id": "feature-2",
+        "number": "02",
+        "title": "TODO: Feature 2 Title",
+        "description": "TODO: Description of feature 2."
+      },
+      {
+        "id": "feature-3",
+        "number": "03",
+        "title": "TODO: Feature 3 Title",
+        "description": "TODO: Description of feature 3."
+      }
+    ],
+    "showcase": {
+      "split": {
+        "label": "TODO: Workflow showcase",
+        "title": "TODO: Showcase title.",
+        "description": "TODO: Showcase workflow explanation.",
+        "note": "Screenshots show the real app with approved demo data.",
+        "screenshot": {
+          "src": "/assets/TODO/showcase-1.png",
+          "width": 1387,
+          "height": 810,
+          "alt": "TODO: Alt text for showcase 1",
+          "caption": "TODO: Showcase caption"
+        }
+      }
+    }
+  },
+  "modules": {
+    "id": "modules",
+    "label": "TODO: Modules eyebrow",
+    "headline": {
+      "main": "TODO: Modules headline<br>",
+      "highlight": "for your business."
+    },
+    "note": "TODO: Optional note regarding module availability.",
+    "items": [
+      {
+        "label": "Core or add-on",
+        "title": "TODO: Module 1",
+        "description": "TODO: Description of module 1."
+      }
+    ]
+  },
+  "platformsSection": {
+    "id": "platforms",
+    "label": "Supported Platforms",
+    "headline": "TODO: Headline for platform support.",
+    "description": "TODO: Platform licencing description.",
+    "badges": [
+      "▣ Windows",
+      "▯ Android",
+      "↔ Both"
+    ],
+    "pricingButton": "View pricing",
+    "appLink": {
+      "href": "#get-the-app",
+      "text": "Get the app ↗"
+    },
+    "screenshot": {
+      "src": "/assets/TODO/platform-screenshot.png",
+      "width": 1387,
+      "height": 810,
+      "alt": "TODO: Subscription or platform screenshot",
+      "caption": "Demo data, not current pricing"
+    }
+  },
+  "howItWorks": {
+    "id": "how-it-works",
+    "label": "Getting Started",
+    "headline": {
+      "main": "From signup<br>",
+      "highlight": "to your first day."
+    },
+    "steps": [
+      {
+        "step": "01",
+        "title": "Your business",
+        "description": "Enter your business details."
+      },
+      {
+        "step": "02",
+        "title": "Your plan",
+        "description": "Choose an available plan or trial."
+      },
+      {
+        "step": "03",
+        "title": "Your app",
+        "description": "Install the app and sign in."
+      }
+    ]
+  },
+  "pricingTeaser": {
+    "id": "pricing",
+    "label": "Plans for your business",
+    "headline": "Choose your licences.<br>Make room to grow.",
+    "description": "Choose licences and modules on the live pricing page. (NO PRICES HERE)",
+    "buttonText": "View pricing"
+  },
+  "faq": {
+    "id": "faq",
+    "label": "Frequently asked questions",
+    "headline": {
+      "main": "Answers to common<br>",
+      "highlight": "questions."
+    },
+    "items": [
+      {
+        "question": "TODO: FAQ question 1?",
+        "answer": "TODO: FAQ answer 1."
+      }
+    ]
+  },
+  "getTheApp": {
+    "id": "get-the-app",
+    "logo": "/assets/TODO/mark.svg",
+    "label": "TODO: Get the app",
+    "headline": "TODO: Download headline.",
+    "description": "Contact Trovo for the installer files.",
+    "action": {
+      "href": "tel:+919042672148",
+      "text": "Call Trovo ↗"
+    }
+  },
+  "closing": {
+    "label": "TODO: Closing eyebrow",
+    "headline": "Ready to get started?",
+    "primaryButton": "Sign up",
+    "secondaryButton": {
+      "href": "tel:+919042672148",
+      "text": "Talk to us ↗"
+    }
+  },
+  "seo": {
+    "title": "TODO: Product Name | Trovo Tech Solutions",
+    "description": "TODO: Meta description for search engines and social sharing.",
+    "canonical": "https://trovotechsolutions.in/products/TODO-slug/",
+    "ogType": "website",
+    "ogTitle": "TODO: OG Title",
+    "ogDescription": "TODO: OG Description",
+    "ogImage": "https://trovotechsolutions.in/assets/TODO/share-card.png",
+    "ogImageWidth": 1200,
+    "ogImageHeight": 630,
+    "ogImageAlt": "TODO: Share card description",
+    "twitterCard": "summary_large_image",
+    "twitterTitle": "TODO: Twitter Title",
+    "twitterDescription": "TODO: Twitter Description",
+    "twitterImage": "https://trovotechsolutions.in/assets/TODO/share-card.png",
+    "icon": "/assets/TODO/icon.svg",
+    "jsonLd": {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "TODO: Product Name",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Windows, Android",
+      "description": "TODO: Business software description (NO offers or prices)",
+      "url": "https://trovotechsolutions.in/products/TODO-slug/",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Trovo Tech Solutions"
+      }
+    }
+  }
+}

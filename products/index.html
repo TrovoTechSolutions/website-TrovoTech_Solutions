@@ -34,8 +34,8 @@
   <link rel="stylesheet" href="/css/responsive.css?v=11" />
   <link rel="stylesheet" href="/css/products.css?v=2" />
   <script src="/js/site-navigation.js?v=1" defer></script>
-  <script src="/js/baylior-destinations.js?v=1" defer></script>
   <script src="/js/products.js?v=1" defer></script>
+  <script src="/js/product-destinations.js?v=1" defer></script>
 </head>
 <body>
   <a href="#main" class="skip-link">Skip to content</a>
@@ -84,15 +84,16 @@
         </div>
 
         <div class="products-grid" aria-live="polite">
-          <article class="product-card" data-industry="automotive" aria-labelledby="baylior-card-title">
+                                        <!-- EXTENSION POINT: Optional Zoho-style featured product banner/panel (not built now; render here if product.get('featured')) -->
+                    <article class="product-card" data-industry="automotive" aria-labelledby="baylior-card-title">
             <div>
               <div class="product-card__tags-row">
                 <span class="product-card__tag">Automotive · Car wash and detailing</span>
                 <span class="product-card__badge-coming-soon">Coming Soon</span>
               </div>
-              <img class="product-card__logo" src="../assets/baylior/baylior-lockup-on-dark.svg" onerror="this.onerror=null;this.src='/assets/baylior/baylior-lockup-on-dark.svg';" width="220" height="59" alt="Baylior Business Suite" />
+              <img class="product-card__logo" src="/assets/baylior/baylior-lockup-on-dark.svg" width="268" height="72" alt="Baylior Business Suite" />
               <h2 id="baylior-card-title">One suite. <span>Every detail.</span></h2>
-              <p>Run your car spa from vehicle in to delivery: customers, job cards, invoices, payments and staff in one place.</p>
+              <p>Manage customers, vehicles, job cards, invoices, payments and staff with Baylior for Windows and Android. Choose the modules your business needs.</p>
               <ul class="product-card__features">
                 <li><span class="material-symbols-outlined" aria-hidden="true">assignment</span>Job cards</li>
                 <li><span class="material-symbols-outlined" aria-hidden="true">receipt_long</span>GST and cash invoices</li>
@@ -101,13 +102,13 @@
               </ul>
               <p class="product-card__platforms">WINDOWS · ANDROID</p>
               <div class="product-card__actions">
-                <a class="bp-action" href="/contact.html">Request Early Access</a>
-                <a class="bp-action bp-action--outline" href="tel:+919042672148">Talk to us ↗</a>
+                <a class="bp-action" href="/products/baylior/">Explore Baylior</a>
+                <a class="bp-action bp-action--outline" data-destination="signup" data-product="carspa" data-baylior-destination="signup" href="/products/baylior/#preview-links">Try now<small class="bp-placeholder">Preview link</small></a>
               </div>
             </div>
-            <div class="product-card__shot">
-              <img src="../assets/baylior/dashboard.png" onerror="this.onerror=null;this.src='/assets/baylior/dashboard.png';" width="1387" height="810" loading="lazy" alt="Baylior Windows app home screen with demo business data" />
-            </div>
+            <a class="product-card__shot" href="/products/baylior/" aria-label="Explore Baylior">
+              <img src="/assets/baylior/dashboard.png" width="1387" height="810" loading="lazy" alt="Baylior Windows app home screen with demo business data" />
+            </a>
           </article>
 
           <div class="products-next">

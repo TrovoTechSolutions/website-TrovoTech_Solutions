@@ -1,0 +1,368 @@
+{
+  "slug": "baylior",
+  "platformKey": "carspa",
+  "status": "live-preview",
+  "badge": "Coming Soon",
+  "name": "Baylior",
+  "shortName": "Baylior",
+  "industry": "Automotive · Car wash and detailing",
+  "industryFilter": "automotive",
+  "tagline": "One suite. Every detail.",
+  "heroLabel": "Built for car wash & detailing businesses",
+  "headline": {
+    "main": "Run your car spa<br>on ",
+    "highlight": "one suite."
+  },
+  "subline": {
+    "text": "One suite. ",
+    "highlight": "Every detail."
+  },
+  "description": "Manage customers, vehicles, job cards, invoices, payments and staff with Baylior for Windows and Android. Choose the modules your business needs.",
+  "platforms": [
+    "Windows",
+    "Android"
+  ],
+  "meta": "Windows · Android <span> / </span> A product of Trovo Tech Solutions",
+  "accentColours": {
+    "primary": "#2d6bff",
+    "secondary": "#14c8f0",
+    "highlight": "#dc74fa",
+    "night": "#0a0f1c",
+    "panel": "#121a2b",
+    "line": "#29364d",
+    "text": "#edf3ff",
+    "muted": "#b0bdd3",
+    "gradient": "linear-gradient(110deg, #2d6bff, #14c8f0)"
+  },
+  "logoFiles": {
+    "onDark": "/assets/baylior/baylior-lockup-on-dark.svg",
+    "onLight": "/assets/baylior/baylior-lockup-on-light.svg",
+    "mark": "/assets/baylior/baylior-mark.svg",
+    "icon": "/assets/baylior/baylior-icon.svg",
+    "width": 268,
+    "height": 72
+  },
+  "heroVisual": {
+    "glowLogo": {
+      "src": "/assets/baylior/baylior-logo-original.webp",
+      "width": 280,
+      "height": 280,
+      "alt": ""
+    },
+    "visualLabel": "YOUR BUSINESS. TOGETHER.",
+    "screenshot": {
+      "src": "/assets/baylior/dashboard.png",
+      "width": 1387,
+      "height": 810,
+      "alt": "Baylior Detailing demo suite home with Billing, Staff, Reports and Settings",
+      "caption": "Real Windows app · Demo data",
+      "fetchpriority": "high"
+    }
+  },
+  "cardImage": {
+    "src": "/assets/baylior/dashboard.png",
+    "width": 1387,
+    "height": 810,
+    "alt": "Baylior Windows app home screen with demo business data"
+  },
+  "cardHighlights": [
+    {
+      "icon": "assignment",
+      "text": "Job cards"
+    },
+    {
+      "icon": "receipt_long",
+      "text": "GST and cash invoices"
+    },
+    {
+      "icon": "directions_car",
+      "text": "Customers and vehicles"
+    },
+    {
+      "icon": "groups",
+      "text": "Staff and attendance"
+    }
+  ],
+  "sectionBar": [
+    {
+      "id": "features",
+      "label": "Features"
+    },
+    {
+      "id": "platforms",
+      "label": "Windows & Android"
+    },
+    {
+      "id": "how-it-works",
+      "label": "How it works"
+    },
+    {
+      "id": "pricing",
+      "label": "Pricing"
+    },
+    {
+      "id": "faq",
+      "label": "FAQ"
+    }
+  ],
+  "features": {
+    "id": "features",
+    "label": "From vehicle in to delivery",
+    "headline": {
+      "main": "The everyday work.<br>",
+      "highlight": "All connected."
+    },
+    "lead": "Keep your daily jobs together, with optional modules for outside vendors, dealership work and franchise networks.",
+    "items": [
+      {
+        "id": "customers-vehicles",
+        "number": "01",
+        "title": "Customers and vehicles",
+        "description": "Keep customer and vehicle records together with the jobs you create for them."
+      },
+      {
+        "id": "job-cards",
+        "number": "02",
+        "title": "Job cards",
+        "description": "Track work from draft and in progress through quality check, ready and delivered. Keep services and job status in the job card."
+      },
+      {
+        "id": "billing-invoices",
+        "number": "03",
+        "title": "Billing and invoices",
+        "description": "Create GST and cash invoices with your business details, service lines and totals."
+      },
+      {
+        "id": "payments",
+        "number": "04",
+        "title": "Payments",
+        "description": "Record payments and review collections and outstanding invoice balances."
+      },
+      {
+        "id": "staff",
+        "number": "05",
+        "title": "Staff and attendance",
+        "description": "Maintain your staff directory and record attendance. Add the Staff advances & salary module for advances and salary workflows."
+      },
+      {
+        "id": "reports",
+        "number": "06",
+        "title": "Reports and exports",
+        "description": "Review sales, collections and outstanding balances, and export reports to Excel. Additional report access depends on your modules and permissions."
+      }
+    ],
+    "showcase": {
+      "split": {
+        "label": "Job cards → invoices",
+        "title": "Keep the details<br>with the job.",
+        "description": "Services, vehicle information and work status stay in the job card. Create GST and cash invoices with your business details, service lines and totals.",
+        "note": "Screenshots show the real app with approved demo data. Select an image to see it full size.",
+        "screenshot": {
+          "src": "/assets/baylior/job-card.png",
+          "width": 1387,
+          "height": 810,
+          "alt": "Baylior job card for Customer_1 showing services, vehicle and invoiced status",
+          "caption": "Job card · Services, vehicle and work status"
+        }
+      },
+      "invoice": {
+        "screenshot": {
+          "src": "/assets/baylior/invoice.png",
+          "width": 1387,
+          "height": 810,
+          "alt": "Baylior tax invoice showing Full body wash, GST breakdown and total",
+          "caption": "Invoice · Service lines, tax breakdown and totals"
+        }
+      }
+    }
+  },
+  "modules": {
+    "id": "modules",
+    "label": "Room for the way you work",
+    "headline": {
+      "main": "Add the modules<br>",
+      "highlight": "your business needs."
+    },
+    "note": "Franchise network capacity can be extended with the “10 more franchise branches” add-on. Plan and module availability is confirmed on the pricing page.",
+    "items": [
+      {
+        "label": "Professional, or add-on",
+        "title": "Outside jobs & vendors",
+        "description": "Send work to outside vendors and track its cost and your margin."
+      },
+      {
+        "label": "Professional, or add-on",
+        "title": "Staff advances & salary",
+        "description": "Track advances and monthly salary, including advance recovery."
+      },
+      {
+        "label": "Professional, or add-on",
+        "title": "WhatsApp automation",
+        "description": "Send invoice and payment messages to customers on WhatsApp."
+      },
+      {
+        "label": "Professional, or add-on",
+        "title": "Advanced reports",
+        "description": "Explore GST, staff productivity, job turnaround and margins."
+      },
+      {
+        "label": "Professional, or add-on",
+        "title": "Audit trail",
+        "description": "Review recorded actions such as invoice cancellations, payments and attendance changes."
+      },
+      {
+        "label": "Add-on, any plan",
+        "title": "Showroom / B2B module",
+        "description": "Manage dealership showroom work with staff, daily vehicle logs and dealer billing."
+      },
+      {
+        "label": "Add-on, any plan",
+        "title": "Franchise network",
+        "description": "View approved totals shared by your franchise branches."
+      }
+    ]
+  },
+  "platformsSection": {
+    "id": "platforms",
+    "label": "Windows · Android",
+    "headline": "At the desk.<br>On the move.",
+    "description": "Choose a Windows, Android or combined licence for each user. View current licence options and prices on the pricing page.",
+    "badges": [
+      "▣ Windows",
+      "▯ Android",
+      "↔ Both"
+    ],
+    "pricingButton": "View pricing",
+    "appLink": {
+      "href": "#get-the-app",
+      "text": "Get the app ↗"
+    },
+    "screenshot": {
+      "src": "/assets/baylior/subscription.png",
+      "width": 1387,
+      "height": 810,
+      "alt": "Baylior Professional subscription with user licences and included modules",
+      "caption": "Subscription · Demo data, not current pricing"
+    }
+  },
+  "howItWorks": {
+    "id": "how-it-works",
+    "label": "A clear start",
+    "headline": {
+      "main": "From signup<br>",
+      "highlight": "to your first job."
+    },
+    "steps": [
+      {
+        "step": "01",
+        "title": "Your business",
+        "description": "Enter your business details."
+      },
+      {
+        "step": "02",
+        "title": "Your plan",
+        "description": "Choose an available plan or trial. Check current eligibility during signup."
+      },
+      {
+        "step": "03",
+        "title": "Your app",
+        "description": "Install the app and register with your company and registration codes."
+      }
+    ]
+  },
+  "pricingTeaser": {
+    "id": "pricing",
+    "label": "Plans for your business",
+    "headline": "Choose your licences.<br>Make room to grow.",
+    "description": "Choose licences and modules on the live pricing page.",
+    "buttonText": "View pricing"
+  },
+  "faq": {
+    "id": "faq",
+    "label": "A few useful answers",
+    "headline": {
+      "main": "Before you<br>",
+      "highlight": "get started."
+    },
+    "items": [
+      {
+        "question": "How does licensing work?",
+        "answer": "Each user needs a licence for Windows, Android or both. See the pricing page for current options."
+      },
+      {
+        "question": "Is a trial available?",
+        "answer": "Check the signup page for current trial availability, eligibility and duration."
+      },
+      {
+        "question": "Can I add users later?",
+        "answer": "The Owner can manage the subscription inside the app; available changes and charges are shown there."
+      },
+      {
+        "question": "How do I pay?",
+        "answer": "Follow the payment options shown during signup, or contact Trovo for assistance."
+      },
+      {
+        "question": "Where do I sign in?",
+        "answer": "Install Baylior on Windows or Android, register with your codes and sign in inside the app."
+      },
+      {
+        "question": "What about privacy?",
+        "answer": "Read the <a href=\"/privacy-policy/\">Privacy Policy</a> for how information is handled."
+      },
+      {
+        "question": "How can I get help?",
+        "answer": "Contact Trovo Tech Solutions on <a href=\"tel:+919042672148\">+91 90426 72148</a> or <a href=\"mailto:info@trovotechsolutions.in\">info@trovotechsolutions.in</a>."
+      }
+    ]
+  },
+  "getTheApp": {
+    "id": "get-the-app",
+    "logo": "/assets/baylior/baylior-mark.svg",
+    "label": "Get Baylior",
+    "headline": "Your next job starts here.",
+    "description": "Contact Trovo for the Windows and Android installers.",
+    "action": {
+      "href": "tel:+919042672148",
+      "text": "Call Trovo ↗"
+    }
+  },
+  "closing": {
+    "label": "One suite. Every detail.",
+    "headline": "Ready to get started?",
+    "primaryButton": "Sign up",
+    "secondaryButton": {
+      "href": "tel:+919042672148",
+      "text": "Talk to us ↗"
+    }
+  },
+  "seo": {
+    "title": "Baylior — Business Suite for car spas | Trovo Tech Solutions",
+    "description": "Manage your car spa with Baylior: customers, job cards, invoices, payments and staff on Windows and Android. A product of Trovo Tech Solutions.",
+    "canonical": "https://trovotechsolutions.in/products/baylior/",
+    "ogType": "website",
+    "ogTitle": "Baylior — One suite. Every detail.",
+    "ogDescription": "Business software for car wash and detailing businesses. Windows and Android. By Trovo Tech Solutions.",
+    "ogImage": "https://trovotechsolutions.in/assets/baylior/share-card.png",
+    "ogImageWidth": 1200,
+    "ogImageHeight": 630,
+    "ogImageAlt": "Baylior Business Suite. One suite. Every detail. For car wash and detailing businesses, on Windows and Android.",
+    "twitterCard": "summary_large_image",
+    "twitterTitle": "Baylior — One suite. Every detail.",
+    "twitterDescription": "Business software for car wash and detailing businesses.",
+    "twitterImage": "https://trovotechsolutions.in/assets/baylior/share-card.png",
+    "icon": "/assets/baylior/baylior-icon.svg",
+    "jsonLd": {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Baylior",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Windows, Android",
+      "description": "Business software for car wash and detailing businesses: customers, job cards, invoices, payments and staff.",
+      "url": "https://trovotechsolutions.in/products/baylior/",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Trovo Tech Solutions"
+      }
+    }
+  }
+}

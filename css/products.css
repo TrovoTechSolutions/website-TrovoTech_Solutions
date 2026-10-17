@@ -73,7 +73,7 @@
   color: var(--baylior-text);
 }
 
-/* Shown until Phase 5 connects a verified sign-up address (see js/baylior-destinations.js). */
+/* Shown until Phase 5 connects a verified sign-up address (see js/product-destinations.js). */
 .bp-placeholder {
   display: block;
   margin-top: 4px;
