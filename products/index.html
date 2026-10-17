@@ -29,10 +29,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet" />
 
   <!-- Styles (root-relative: this page lives in /products/) -->
-  <link rel="stylesheet" href="/css/variables.css?v=8" />
-  <link rel="stylesheet" href="/css/style.css?v=8" />
-  <link rel="stylesheet" href="/css/responsive.css?v=8" />
-  <link rel="stylesheet" href="/css/products.css?v=1" />
+  <link rel="stylesheet" href="/css/variables.css?v=10" />
+  <link rel="stylesheet" href="/css/style.css?v=11" />
+  <link rel="stylesheet" href="/css/responsive.css?v=11" />
+  <link rel="stylesheet" href="/css/products.css?v=2" />
   <script src="/js/site-navigation.js?v=1" defer></script>
   <script src="/js/baylior-destinations.js?v=1" defer></script>
   <script src="/js/products.js?v=1" defer></script>
@@ -43,7 +43,7 @@
   <header class="navbar site-header">
     <div class="container navbar__inner">
       <a href="/index.html" class="brand-lockup">
-        <img src="/assets/logo-navbar.webp" alt="Trovo Tech Solutions" class="brand-lockup__icon" width="72" height="72" />
+        <img src="../assets/logo-navbar.webp" onerror="this.onerror=null;this.src='/assets/logo-navbar.webp';" alt="Trovo Tech Solutions" class="brand-lockup__icon" width="72" height="72" />
         <div class="brand-lockup__text">
           <span class="brand-lockup__title">Trovo Tech</span>
           <span class="brand-lockup__subtitle">Solutions</span>
@@ -57,9 +57,7 @@
         <a href="/products/" aria-current="page">Products</a>
         <a href="/projects.html">Portfolio</a>
         <a href="/contact.html">Contact</a>
-        <a class="nav-quote" href="/contact.html">Get a Quote</a>
       </nav>
-      <a href="/contact.html" class="btn btn--primary">Get a Quote</a>
       <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-navigation">
         <span class="material-symbols-outlined" aria-hidden="true">menu</span>
       </button>
@@ -88,8 +86,11 @@
         <div class="products-grid" aria-live="polite">
           <article class="product-card" data-industry="automotive" aria-labelledby="baylior-card-title">
             <div>
-              <span class="product-card__tag">Automotive · Car wash and detailing</span><br />
-              <img class="product-card__logo" src="/assets/baylior/baylior-lockup-on-dark.svg" width="220" height="59" alt="Baylior Business Suite" />
+              <div class="product-card__tags-row">
+                <span class="product-card__tag">Automotive · Car wash and detailing</span>
+                <span class="product-card__badge-coming-soon">Coming Soon</span>
+              </div>
+              <img class="product-card__logo" src="../assets/baylior/baylior-lockup-on-dark.svg" onerror="this.onerror=null;this.src='/assets/baylior/baylior-lockup-on-dark.svg';" width="220" height="59" alt="Baylior Business Suite" />
               <h2 id="baylior-card-title">One suite. <span>Every detail.</span></h2>
               <p>Run your car spa from vehicle in to delivery: customers, job cards, invoices, payments and staff in one place.</p>
               <ul class="product-card__features">
@@ -100,13 +101,13 @@
               </ul>
               <p class="product-card__platforms">WINDOWS · ANDROID</p>
               <div class="product-card__actions">
-                <a class="bp-action" href="/products/baylior/">Explore Baylior</a>
-                <a class="bp-action bp-action--outline" data-baylior-destination="signup" href="/products/baylior/#preview-links">Sign up<small class="bp-placeholder">Preview link</small></a>
+                <a class="bp-action" href="/contact.html">Request Early Access</a>
+                <a class="bp-action bp-action--outline" href="tel:+919042672148">Talk to us ↗</a>
               </div>
             </div>
-            <a class="product-card__shot" href="/products/baylior/" aria-label="Explore Baylior">
-              <img src="/assets/baylior/dashboard.png" width="1387" height="810" loading="lazy" alt="Baylior Windows app home screen with demo business data" />
-            </a>
+            <div class="product-card__shot">
+              <img src="../assets/baylior/dashboard.png" onerror="this.onerror=null;this.src='/assets/baylior/dashboard.png';" width="1387" height="810" loading="lazy" alt="Baylior Windows app home screen with demo business data" />
+            </div>
           </article>
 
           <div class="products-next">

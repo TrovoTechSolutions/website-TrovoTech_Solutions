@@ -71,20 +71,32 @@ def current_section(page):
     }.get(relative)
 
 
+def brand_for(page):
+    depth = len(page.relative_to(ROOT).parts) - 1
+    prefix = "" if depth == 0 else "../" * depth
+    return f"""<a href="/index.html" class="brand-lockup">
+        <img src="{prefix}assets/logo-navbar.webp" onerror="this.onerror=null;this.src='/assets/logo-navbar.webp';" alt="Trovo Tech Solutions" class="brand-lockup__icon" width="72" height="72" />
+        <div class="brand-lockup__text">
+          <span class="brand-lockup__title">Trovo Tech</span>
+          <span class="brand-lockup__subtitle">Solutions</span>
+          <span class="brand-lockup__tagline">Beyond Today</span>
+        </div>
+      </a>"""
+
+
 def header_for(page):
     current = current_section(page)
+    brand = brand_for(page)
     links = "\n        ".join(
         f'<a href="{href}"{" aria-current=" + chr(34) + "page" + chr(34) if key == current else ""}>{label}</a>'
         for href, label, key in NAV
     )
     return f"""<header class="navbar site-header">
     <div class="container navbar__inner">
-      {BRAND}
+      {brand}
       <nav class="nav-links" id="site-navigation" aria-label="Primary">
         {links}
-        <a class="nav-quote" href="/contact.html">Get a Quote</a>
       </nav>
-      <a href="/contact.html" class="btn btn--primary">Get a Quote</a>
       <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-navigation">
         <span class="material-symbols-outlined" aria-hidden="true">menu</span>
       </button>

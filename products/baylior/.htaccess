@@ -1,3 +1,2 @@
-# Phase 2 local preview only. Remove this gate only during verified Phase 5/6 integration.
-# In Apache/LiteSpeed this prevents an accidental website upload exposing the preview.
-Require local
+# Trovo Tech Solutions - Baylior Business Suite
+# Preview gate removed for public Coming Soon visibility

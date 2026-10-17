@@ -23,31 +23,14 @@
   border-bottom-color: var(--color-secondary);
 }
 
-/* Six links plus Get a Quote are tight on small laptops: trim the logo and gaps. */
+/* Responsive adjustments on small laptops */
 @media (min-width: 1024px) and (max-width: 1199px) {
   .site-header .navbar__inner { gap: var(--space-4); }
-  .site-header .brand-lockup__icon { height: 48px; width: auto; }
-  .site-header .brand-lockup__title { font-size: 1.3rem; }
-  .site-header .brand-lockup__subtitle { font-size: 0.7rem; }
+  .site-header .brand-lockup__icon { height: 52px; width: auto; }
+  .site-header .brand-lockup__title { font-size: 1.4rem; }
+  .site-header .brand-lockup__subtitle { font-size: 0.72rem; }
   .site-header .brand-lockup__tagline { font-size: 0.6rem; }
-  .site-header .nav-links { gap: var(--space-5); }
-  .site-header .nav-links a { font-size: var(--fs-sm); }
-}
-
-/* "Get a Quote" lives in the bar on desktop and inside the drawer below 1024px. */
-.nav-quote { display: none; }
-
-@media (max-width: 1023px) {
-  .nav-links .nav-quote {
-    display: inline-flex;
-    margin-top: var(--space-3);
-    padding: 0.75rem 1.5rem;
-    border: 0;
-    border-radius: var(--radius-sm);
-    background: var(--gradient-brand);
-    color: #ffffff;
-    font-weight: var(--fw-semibold);
-  }
+  .site-header .nav-links { gap: var(--space-4); }
 }
 
 .site-header :focus-visible,
@@ -224,16 +207,50 @@
   color: var(--baylior-text);
 }
 .product-card[hidden] { display: none; }
+.product-card__tags-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+}
 .product-card__tag {
   display: inline-flex;
   gap: var(--space-2);
-  margin-bottom: var(--space-5);
   padding: 4px 12px;
   border: 1px solid #34506b;
   border-radius: var(--radius-pill);
   color: #9fdff0;
   font-size: var(--fs-xs);
   font-weight: var(--fw-semibold);
+}
+.product-card__badge-coming-soon {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  background: rgba(20, 200, 240, 0.15);
+  border: 1px solid var(--baylior-cyan);
+  color: var(--baylior-cyan);
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.product-card__badge-coming-soon::before {
+  content: '';
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--baylior-cyan);
+  box-shadow: 0 0 8px var(--baylior-cyan);
+  animation: bpPulseGlow 2s infinite ease-in-out;
+}
+@keyframes bpPulseGlow {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.85); }
 }
 .product-card__logo { width: 210px; height: auto; }
 .product-card h2 {

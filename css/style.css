@@ -242,17 +242,27 @@ h4 { font-size: var(--fs-h4); font-weight: var(--fw-semibold); }
   justify-content: space-between;
   padding-block: var(--space-4);
 }
-.nav-links { display: flex; align-items: center; gap: var(--space-6); }
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+}
 .nav-links a {
   font-size: var(--fs-base);
   color: var(--color-text-muted);
   font-weight: var(--fw-medium);
-  padding-bottom: 2px;
+  padding: 0.35rem 0.2rem;
   border-bottom: 2px solid transparent;
   transition: color var(--transition), border-color var(--transition);
+  text-decoration: none;
+  white-space: nowrap;
 }
-.nav-links a:hover { color: var(--color-secondary); }
-.nav-links a.is-active { color: var(--color-secondary); border-bottom-color: var(--color-secondary); }
+.nav-links a:hover { color: #ffffff; }
+.nav-links a.is-active,
+.nav-links a[aria-current="page"] {
+  color: #ffffff;
+  border-bottom-color: var(--color-secondary);
+}
 
 .nav-toggle { display: none; color: var(--color-primary); }
 
